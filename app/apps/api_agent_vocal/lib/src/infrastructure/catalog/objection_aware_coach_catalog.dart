@@ -70,13 +70,13 @@ final class ObjectionAwareCoachCatalog implements CoachCatalog {
               (ObjectionKnowledgeEntry entry) =>
                   entry.reviewStatus == 'live' && entry.hasCustomResponse,
             )
-        .map(
-          (ObjectionKnowledgeEntry entry) => _ScoredObjection(
-            entry: entry,
-            score: latestText.trim().isEmpty
-                ? 1
-                : _matchScore(entry.text, latestText),
-          ),
+            .map(
+              (ObjectionKnowledgeEntry entry) => _ScoredObjection(
+                entry: entry,
+                score: latestText.trim().isEmpty
+                    ? 1
+                    : _matchScore(entry.text, latestText),
+              ),
             )
             .where((_ScoredObjection item) => item.score >= 0.2)
             .toList(growable: false)

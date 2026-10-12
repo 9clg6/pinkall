@@ -1,64 +1,159 @@
-# Pinkall
+<div align="center">
 
-Pinkall est un projet expérimental composé d’une application Flutter et d’un site Vite/React.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/brand/pinkall-lockup-dark.svg">
+  <img src="docs/brand/pinkall-lockup-light.svg" alt="Pinkall" width="260">
+</picture>
 
-## Aperçu
+### The sales phone that coaches you on every call
 
-Landing page :
-
-![Landing page Pinkall](docs/screenshots/landing-desktop.png)
-
-<p>
-  <img src="docs/screenshots/landing-coaching.png" alt="Section coaching de la landing page" width="62%">
-  <img src="docs/screenshots/landing-mobile.png" alt="Landing page sur mobile" width="24%">
-</p>
-
-Application (téléphone, coaching pendant l’appel, débrief) :
+Place the call in the app. Get one useful suggestion while you talk.<br>
+Hang up to notes, a follow-up draft and one thing to improve next time.
 
 <p>
-  <img src="docs/screenshots/app-home.png" alt="Écran téléphone" width="30%">
-  <img src="docs/screenshots/app-live-call.png" alt="Coaching pendant l’appel" width="30%">
-  <img src="docs/screenshots/app-debrief.png" alt="Débrief après l’appel" width="30%">
+  <a href="LICENSE"><img alt="License: GPL-3.0" src="https://img.shields.io/badge/license-GPL--3.0-D31E7D?style=flat-square"></a>
+  <img alt="Status: proof of concept" src="https://img.shields.io/badge/status-proof%20of%20concept-171519?style=flat-square">
+  <img alt="Flutter 3.44" src="https://img.shields.io/badge/Flutter-3.44-171519?style=flat-square&logo=flutter&logoColor=white">
+  <img alt="Platforms: macOS, iOS, Android" src="https://img.shields.io/badge/platforms-macOS%20%C2%B7%20iOS%20%C2%B7%20Android-171519?style=flat-square">
 </p>
 
-Les écrans de l’application sont rendus hors écran à partir des widgets réels, avec des données fictives.
+<p>
+  <a href="#how-it-works">How it works</a> ·
+  <a href="#screenshots">Screenshots</a> ·
+  <a href="#getting-started">Getting started</a> ·
+  <a href="#repository-layout">Repository layout</a>
+</p>
 
-## Comment ça marche
+<img src="docs/screenshots/landing-desktop.png" alt="Pinkall landing page" width="100%">
 
-<img src="docs/anatomy/pinkall-live-coach.svg" alt="Schéma : le coaching en direct de Pinkall vu comme un magnétophone à bandes" width="100%">
+</div>
 
-Le coaching en direct, dessiné comme un magnétophone à bandes :
+## What is Pinkall?
 
-- le combiné posé sur le coupleur est l’audio de l’appel, et l’interrupteur fermé le consentement à la transcription ;
-- la bande passe devant deux têtes : l’ingestion par le backend, puis la transcription en direct ;
-- le cadran détecte la fin d’un tour de parole (seuil 0,85) ;
-- le portique lève alors une seule fiche du bac de 50 cartes : la suggestion affichée pendant l’appel, en rose ;
-- la touche stop imprime le ticket : le débrief après l’appel.
+Pinkall is an experimental sales phone for B2B founders who still run their own
+prospecting, discovery and demo calls. It is a proof of concept: there are no
+customers, no benchmarks and no performance claims yet.
 
-Figure dessinée avec le skill [Anatomy](https://skills.wheresryan.sh/anatomy).
+- **Call from the app.** A real outbound call through Telnyx, on macOS, iOS and Android.
+- **Live transcript, per speaker.** Seller and prospect audio travel on separate tracks.
+- **One suggestion at a time.** The live coach is optional and off by default. When it
+  speaks, it shows a single card, never a stream of prompts.
+- **A debrief when you hang up.** Summary, follow-up draft and one improvement tied to
+  what was actually said.
+- **Progress over time.** A descriptive history of your recent calls, without a global score.
+- **Consent first.** Nothing is transcribed until the participants are informed.
 
-## Structure
+Nothing in the runtime is simulated. Without provider keys the app still opens, and
+says plainly that calling or transcription is unavailable.
 
-- `app/` : workspace Flutter/Dart.
-- `site/` : landing page Vite/React.
-- `ARCHITECTURE.md` : documentation d’architecture.
-- `PRODUCT.md` : cadrage produit.
+## How it works
 
-## Démarrage du site
+<img src="docs/anatomy/pinkall-live-coach.svg" alt="The Pinkall live coach drawn as a reel-to-reel tape recorder that lifts one card out of a tray" width="100%">
+
+The live coach, drawn as a tape recorder:
+
+| Part of the machine | What it stands for |
+| --- | --- |
+| Handset resting on the coupler | Call audio coming from telephony |
+| Closed knife switch | Consent to transcription |
+| Tape passing two heads | Backend ingestion, then live speech-to-text |
+| Dial and its needle | End-of-turn detection (threshold 0.85) |
+| Gantry lifting one pink card out of 50 | The single suggestion shown during the call |
+| Stop key and printed ticket | The debrief produced after hang-up |
+
+<details>
+<summary><b>The same flow, as a sequence</b></summary>
+
+```mermaid
+sequenceDiagram
+    participant App as Pinkall app (Flutter)
+    participant API as Pinkall API (Dart)
+    participant Tel as Telnyx
+    participant STT as Deepgram Flux
+    participant Coach as Coach (OpenAI, text only)
+    participant Batch as Voxtral (batch)
+
+    App->>API: Request a short-lived voice token
+    App->>API: Create the call session
+    App->>Tel: WebRTC leg
+    Tel-->>API: Signed webhook
+    API->>Tel: Dial the prospect and bridge both legs
+    Tel-->>API: Media stream, seller and prospect tracks
+    Note over API: Transcription starts only after consent
+    API->>STT: Live audio, one stream per track
+    STT-->>API: Transcript and end of turn
+    API-->>App: Live transcript
+    opt Coach switched on during the call
+        API->>Coach: Transcript and approved sales context
+        Coach-->>App: One suggestion
+    end
+    App->>API: Hang up
+    API->>Batch: Recorded audio
+    Batch-->>API: Final transcript
+    API-->>App: Debrief and follow-up draft
+```
+
+</details>
+
+Figure drawn with the [Anatomy](https://skills.wheresryan.sh/anatomy) skill.
+
+## Screenshots
+
+<table>
+  <tr>
+    <td width="33%"><img src="docs/screenshots/app-home.png" alt="Dialer screen"></td>
+    <td width="33%"><img src="docs/screenshots/app-live-call.png" alt="Live call with one coach suggestion"></td>
+    <td width="33%"><img src="docs/screenshots/app-debrief.png" alt="Debrief after the call"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Dial</b><br>Number, contact and an optional AI briefing</td>
+    <td align="center"><b>Talk</b><br>Live transcript and one suggestion</td>
+    <td align="center"><b>Debrief</b><br>Summary and a follow-up ready to review</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td width="72%"><img src="docs/screenshots/landing-coaching.png" alt="Coaching section of the landing page"></td>
+    <td width="28%"><img src="docs/screenshots/landing-mobile.png" alt="Landing page on a phone"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Landing page</b>, coaching section</td>
+    <td align="center"><b>Landing page</b>, mobile</td>
+  </tr>
+</table>
+
+App screens are rendered off-screen from the real Flutter widgets with fictitious data.
+
+## Built with
+
+| Layer | Technology |
+| --- | --- |
+| App | Flutter and Dart, Riverpod, for macOS, iOS and Android |
+| Backend | Dart HTTP and WebSocket API, deployable as a container |
+| Telephony | Telnyx WebRTC, Call Control and Media Streaming |
+| Speech-to-text | Deepgram Flux live, Mistral Voxtral for the final transcript |
+| Coach and debrief | OpenAI, text only. Call audio is never sent to it |
+| Auth and storage | Supabase Auth, PostgreSQL |
+| Landing page | Vite, React and TypeScript |
+
+## Getting started
+
+### Landing page
 
 ```bash
 cd site
-cp .env.example .env.local
 npm ci
 npm run dev
 ```
 
-`VITE_WAITLIST_ENDPOINT` est une URL publique intégrée au bundle client. N’y placez jamais de secret, de token ou d’identifiants.
+The invite page reads `VITE_PINKALL_SUPABASE_URL` and
+`VITE_PINKALL_SUPABASE_PUBLISHABLE_KEY`. Every `VITE_*` variable ends up in the
+client bundle, so never put a secret in one.
 
-## Démarrage de l’application
+### App and backend
 
-Installez une version de Flutter compatible avec `app/pubspec.yaml`, puis
-utilisez les wrappers épinglés du workspace :
+Install Flutter 3.44.3, then use the pinned wrappers:
 
 ```bash
 cd app
@@ -66,20 +161,45 @@ cd app
 ./tool/check.sh
 ```
 
-`check.sh` couvre le formatage, l'analyse, les suites API/domain/data/mobile,
-le build macOS et les tests natifs macOS. La CI ajoute l'image Docker et les
-builds Android/iOS.
+`check.sh` runs formatting, analysis, the API, domain, data and mobile test suites,
+the macOS build and the native macOS tests.
 
-## Sécurité
+Placing a real call needs your own Telnyx, Deepgram, Mistral and OpenAI accounts.
+The variables are listed in
+[`app/apps/api_agent_vocal/.env.example`](app/apps/api_agent_vocal/.env.example) and
+the full setup is in [`app/README.md`](app/README.md).
 
-Ne commitez jamais de fichier `.env`, de clé de signature ou de configuration locale. Consultez [SECURITY.md](SECURITY.md) pour signaler une vulnérabilité.
+## Repository layout
 
-## Contribution et licence
+```text
+app/
+  apps/app_mobile/         Flutter app for macOS, iOS and Android
+  apps/api_agent_vocal/    Dart backend: telephony, transcription and coach
+  packages/core_*/         Domain, data, foundation and design system
+  knowledge/coaching/      Coaching sources, claims and cards
+  infra/                   Render, Cloud Run and Supabase guides
+site/                      Landing page (Vite, React)
+docs/                      Screenshots, figure and brand assets
+```
 
-Les règles de contribution sont dans [CONTRIBUTING.md](CONTRIBUTING.md).
+Deeper reading: [ARCHITECTURE.md](ARCHITECTURE.md), [PRODUCT.md](PRODUCT.md) and
+[`app/README.md`](app/README.md). These documents are written in French.
+
+## Security
+
+Never commit a `.env` file, a signing key or local configuration. To report a
+vulnerability, see [SECURITY.md](SECURITY.md).
+
+## Contributing
+
+Contribution rules are in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
 
 Copyright (C) 2026 Clement Guyon.
 
-Le code est publié sous la [GNU General Public License v3.0](LICENSE). Vous pouvez l’utiliser, le modifier et le redistribuer, à condition de publier les versions modifiées sous la même licence. Il est fourni sans aucune garantie.
+Pinkall is released under the [GNU General Public License v3.0](LICENSE). You may
+use, modify and redistribute it, provided that modified versions are published
+under the same license. It comes with no warranty.
 
-Le code tiers embarqué dans `app/third_party/` et `.agents/skills/` conserve sa propre licence.
+Third-party code vendored in `app/third_party/` and `.agents/skills/` keeps its own license.
