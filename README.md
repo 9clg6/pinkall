@@ -2,6 +2,27 @@
 
 Pinkall est un projet expérimental composé d’une application Flutter et d’un site Vite/React.
 
+## Aperçu
+
+Landing page :
+
+![Landing page Pinkall](docs/screenshots/landing-desktop.png)
+
+<p>
+  <img src="docs/screenshots/landing-coaching.png" alt="Section coaching de la landing page" width="62%">
+  <img src="docs/screenshots/landing-mobile.png" alt="Landing page sur mobile" width="24%">
+</p>
+
+Application (téléphone, coaching pendant l’appel, débrief) :
+
+<p>
+  <img src="docs/screenshots/app-home.png" alt="Écran téléphone" width="30%">
+  <img src="docs/screenshots/app-live-call.png" alt="Coaching pendant l’appel" width="30%">
+  <img src="docs/screenshots/app-debrief.png" alt="Débrief après l’appel" width="30%">
+</p>
+
+Les écrans de l’application sont rendus hors écran à partir des widgets réels, avec des données fictives.
+
 ## Structure
 
 - `app/` : workspace Flutter/Dart.
