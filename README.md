@@ -23,6 +23,20 @@ Application (téléphone, coaching pendant l’appel, débrief) :
 
 Les écrans de l’application sont rendus hors écran à partir des widgets réels, avec des données fictives.
 
+## Comment ça marche
+
+<img src="docs/anatomy/pinkall-live-coach.svg" alt="Schéma : le coaching en direct de Pinkall vu comme un magnétophone à bandes" width="100%">
+
+Le coaching en direct, dessiné comme un magnétophone à bandes :
+
+- le combiné posé sur le coupleur est l’audio de l’appel, et l’interrupteur fermé le consentement à la transcription ;
+- la bande passe devant deux têtes : l’ingestion par le backend, puis la transcription en direct ;
+- le cadran détecte la fin d’un tour de parole (seuil 0,85) ;
+- le portique lève alors une seule fiche du bac de 50 cartes : la suggestion affichée pendant l’appel, en rose ;
+- la touche stop imprime le ticket : le débrief après l’appel.
+
+Figure dessinée avec le skill [Anatomy](https://skills.wheresryan.sh/anatomy).
+
 ## Structure
 
 - `app/` : workspace Flutter/Dart.
