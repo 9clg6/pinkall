@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pinkall Coach Curator"
+  short_description: "Curate and validate evidence-backed sales coaching"
+  default_prompt: "Use $pinkall-coach-curator to turn this source into auditable coaching claims and recommendation cards."

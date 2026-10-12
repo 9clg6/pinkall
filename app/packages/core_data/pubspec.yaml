@@ -1,0 +1,41 @@
+name: core_data
+description: Pinkall data sources and repository implementations.
+version: 0.1.0
+publish_to: none
+resolution: workspace
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  core_domain: 0.1.0
+  core_foundation: 0.1.0
+  dio: ^5.9.0
+  flutter:
+    sdk: flutter
+  # 1.5.x switched macOS from the CoreAudio ADM to AVAudioEngine. On a real
+  # Telnyx call, that engine opened only the output route and did not enable
+  # microphone input until teardown. Keep the last CoreAudio-based release
+  # until the upstream macOS duplex regression is fixed and verified.
+  flutter_webrtc: 1.4.1
+  freezed_annotation: ^3.1.0
+  json_annotation: ^4.11.0
+  record: ^7.1.1
+  rxdart: 0.28.0
+  # Vendored from telnyx_webrtc 4.3.0. The upstream trickle-ICE client sends
+  # end-of-candidates after 500 ms of silence, which can terminate gathering
+  # before macOS obtains a usable srflx/relay candidate. Keep the fork local
+  # until the fix is released and verified upstream.
+  telnyx_webrtc:
+    path: ../../third_party/telnyx_webrtc
+  web_socket_channel: ^3.0.3
+
+dev_dependencies:
+  build_runner: ^2.15.1
+  flutter_test:
+    sdk: flutter
+  freezed: ^3.2.5
+  json_serializable: ^6.13.0
+  lints: ^6.1.0
+  shared_preferences: 2.5.5
+  test: ^1.31.0

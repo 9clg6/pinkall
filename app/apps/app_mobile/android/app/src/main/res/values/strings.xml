@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="shortcut_import_recording_short">Importer un appel</string>
+    <string name="shortcut_import_recording_long">Importer un enregistrement d’appel</string>
+    <string name="shortcut_import_recording_disabled">L’import d’appel est indisponible</string>
+</resources>

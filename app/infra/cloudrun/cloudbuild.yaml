@@ -1,0 +1,26 @@
+# Build and push only. This configuration never deploys a Cloud Run service.
+# Use an immutable source revision (for example a Git SHA) for _IMAGE_TAG.
+substitutions:
+  _REGION: europe-west9
+  _REPOSITORY: pinkall
+  _IMAGE_NAME: pinkall-api
+  _IMAGE_TAG: manual
+
+steps:
+  - id: build-linux-amd64
+    name: gcr.io/cloud-builders/docker@sha256:6c9b879570fe1c63a78af0b575ca5ac52f6c2c7e25f76f91ae1f2d6cb2a872ee
+    args:
+      - build
+      - --pull
+      - --platform=linux/amd64
+      - --file=apps/api_agent_vocal/Dockerfile
+      - --tag=${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE_NAME}:${_IMAGE_TAG}
+      - .
+
+images:
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE_NAME}:${_IMAGE_TAG}
+
+options:
+  # Cloud Build's default pool now uses e2-standard-2. Keeping an explicit
+  # machineType makes older gcloud schema validators reject this config.
+  logging: CLOUD_LOGGING_ONLY

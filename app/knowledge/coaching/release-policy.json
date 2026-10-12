@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "default_mode": "off",
+  "display": {
+    "max_active_suggestions": 1,
+    "max_suggestions_per_minute": 2,
+    "max_evaluations_per_minute": 12,
+    "global_cooldown_seconds": 24,
+    "default_expiry_seconds": 12
+  },
+  "eligibility": {
+    "minimum_evidence_confidence": 0.7,
+    "internal_alpha_minimum_evidence_confidence": 0.48,
+    "minimum_context_match": 0.82,
+    "internal_alpha_minimum_context_match": 0.8,
+    "minimum_overall_live_confidence": 0.84,
+    "internal_alpha_minimum_overall_live_confidence": 0.84,
+    "internal_alpha_maximum_card_context_minimum": 0.8,
+    "internal_alpha_maximum_card_live_minimum": 0.88,
+    "require_finalized_transcript_turn": true,
+    "require_transcription_consent": true,
+    "require_source_locator": true,
+    "allow_draft_in_shadow": false,
+    "allow_approved_post_call_in_shadow": false
+  },
+  "promotion": {
+    "human_approval_required": true,
+    "minimum_offline_reviews": 2,
+    "minimum_shadow_exposures": 50,
+    "minimum_trigger_precision": 0.85,
+    "maximum_incorrect_rate": 0.03,
+    "maximum_too_late_rate": 0.1
+  }
+}

@@ -1,0 +1,686 @@
+[
+  {
+    "id": "source_franke_park_2006",
+    "version": 1,
+    "title": "Salesperson Adaptive Selling Behavior and Customer Orientation: A Meta-Analysis",
+    "authors": ["George R. Franke", "Jeong-Eun Park"],
+    "provenance": "academic",
+    "method": "meta_analysis",
+    "published_at": "2006-11-01",
+    "locator_url": "https://doi.org/10.1509/jmkr.43.4.693",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and curator-authored factual summary only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Associational meta-analytic evidence; applicability varies by selling context."
+  },
+  {
+    "id": "source_itani_goad_jaramillo_2019",
+    "version": 1,
+    "title": "Building customer relationships while achieving sales performance results: Is listening the holy grail of sales?",
+    "authors": ["Omar S. Itani", "Emily A. Goad", "Fernando Jaramillo"],
+    "provenance": "academic",
+    "method": "meta_analytic_structural_model",
+    "published_at": "2019-09-01",
+    "locator_url": "https://doi.org/10.1016/j.jbusres.2019.04.048",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and curator-authored factual summary only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": ["source_santoro_etal_2025"],
+    "notes": "Synthesizes salesperson-listening research; many component studies are observational."
+  },
+  {
+    "id": "source_huang_etal_2017",
+    "version": 1,
+    "title": "It doesn't hurt to ask: Question-asking increases liking",
+    "authors": ["Karen Huang", "Michael Yeomans", "Alison Wood Brooks", "Julia Minson", "Francesca Gino"],
+    "provenance": "academic",
+    "method": "laboratory_and_field_experiments",
+    "published_at": "2017-09-01",
+    "locator_url": "https://doi.org/10.1037/pspi0000097",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and curator-authored factual summary only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Measures interpersonal liking and question behavior, not B2B conversion."
+  },
+  {
+    "id": "source_drollinger_etal_2006",
+    "version": 1,
+    "title": "Development and validation of the active empathetic listening scale",
+    "authors": ["Tanya Drollinger", "Lucette B. Comer", "Patricia T. Warrington"],
+    "provenance": "academic",
+    "method": "scale_development_three_empirical_studies",
+    "published_at": "2006-02-01",
+    "locator_url": "https://doi.org/10.1002/mar.20105",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and curator-authored factual summary only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Defines sensing, processing and responding dimensions; a measurement paper, not an intervention trial."
+  },
+  {
+    "id": "source_galinsky_etal_2008",
+    "version": 1,
+    "title": "Why it pays to get inside the head of your opponent: The differential effects of perspective taking and empathy in negotiations",
+    "authors": ["Adam D. Galinsky", "William W. Maddux", "Debra Gilin", "Judith B. White"],
+    "provenance": "academic",
+    "method": "controlled_negotiation_experiments",
+    "published_at": "2008-04-01",
+    "locator_url": "https://doi.org/10.1111/j.1467-9280.2008.02096.x",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and curator-authored factual summary only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Negotiation experiments are adjacent to, but not identical with, cold sales calls."
+  },
+  {
+    "id": "source_santoro_etal_2025",
+    "version": 1,
+    "title": "Listen for a change? A longitudinal field experiment on listening's potential to enhance persuasion",
+    "authors": ["Erik Santoro", "David E. Broockman", "Joshua L. Kalla", "Roni Porat"],
+    "provenance": "academic",
+    "method": "preregistered_longitudinal_field_experiment",
+    "published_at": "2025-02-20",
+    "locator_url": "https://doi.org/10.1073/pnas.2421982122",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and curator-authored factual summary only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": ["source_itani_goad_jaramillo_2019"],
+    "notes": "Listening improved interpersonal perceptions but did not add persuasive effect in this political-conversation field experiment."
+  },
+  {
+    "id": "source_mit_entrepreneurial_sales_2015",
+    "version": 1,
+    "title": "MIT 15.387 Entrepreneurial Sales",
+    "authors": ["Lou Shipley", "Kirk Arnold", "Dennis Hoffman"],
+    "provenance": "institutional",
+    "method": "graduate_course_practitioner_material",
+    "published_at": "2015-02-01",
+    "locator_url": "https://ocw.mit.edu/courses/15-387-entrepreneurial-sales-spring-2015/",
+    "rights": {
+      "status": "amber",
+      "basis": "CC BY-NC-SA 4.0; metadata and internal research map only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Useful curriculum map; no course content is copied into the catalog."
+  },
+  {
+    "id": "source_harvard_pon",
+    "version": 1,
+    "title": "Program on Negotiation at Harvard Law School",
+    "authors": ["Program on Negotiation"],
+    "provenance": "institutional",
+    "method": "research_and_practitioner_resource_collection",
+    "published_at": "2026-07-11",
+    "locator_url": "https://www.pon.harvard.edu/",
+    "rights": {
+      "status": "amber",
+      "basis": "Metadata and independently authored synthesis; per-asset review required",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Collection-level record. Each specific asset requires its own locator and rights review."
+  },
+  {
+    "id": "source_spin_selling",
+    "version": 1,
+    "title": "SPIN Selling",
+    "authors": ["Neil Rackham"],
+    "provenance": "practitioner",
+    "method": "practitioner_book_and_sales_observation_program",
+    "published_at": "1988-05-01",
+    "locator_url": "https://www.huthwaiteinternational.com/spin-selling/",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and high-level method names only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Treat technique-level recommendations as E0 until independently corroborated or tested by Pinkall."
+  },
+  {
+    "id": "source_never_split_difference",
+    "version": 1,
+    "title": "Never Split the Difference",
+    "authors": ["Chris Voss", "Tahl Raz"],
+    "provenance": "practitioner",
+    "method": "practitioner_book_and_case_experience",
+    "published_at": "2016-05-17",
+    "locator_url": "https://www.blackswanltd.com/never-split-the-difference",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and independently authored synthesis only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Negotiation practice is adjacent to sales; tactics require contextual and ethical review."
+  },
+  {
+    "id": "source_hormozi_offers",
+    "version": 1,
+    "title": "$100M Offers",
+    "authors": ["Alex Hormozi"],
+    "provenance": "practitioner",
+    "method": "practitioner_book_and_business_cases",
+    "published_at": "2021-07-13",
+    "locator_url": "https://www.acquisition.com/training/offers",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and independently authored synthesis only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Useful offer-framing hypotheses; not academic causal evidence."
+  },
+  {
+    "id": "source_cialdini_principles",
+    "version": 1,
+    "title": "Cialdini Principles of Persuasion",
+    "authors": ["Robert B. Cialdini"],
+    "provenance": "practitioner",
+    "method": "research_synthesis_and_practitioner_framework",
+    "published_at": "2021-05-04",
+    "locator_url": "https://www.influenceatwork.com/principles-of-persuasion/",
+    "rights": {
+      "status": "amber",
+      "basis": "Framework metadata and independently authored synthesis only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Persuasion principles are not permission for manipulative or context-free prompts."
+  },
+  {
+    "id": "source_ramsey_sohi_1997",
+    "version": 1,
+    "title": "Listening to Your Customers: The Impact of Perceived Salesperson Listening Behavior on Relationship Outcomes",
+    "authors": ["Rosemary P. Ramsey", "Ravipreet S. Sohi"],
+    "provenance": "academic",
+    "method": "cross_sectional_structural_equation_model",
+    "published_at": "1997-03-01",
+    "locator_url": "https://doi.org/10.1007/BF02894348",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": ["source_shrivastava_etal_2023"],
+    "notes": "Structural-equation study of new-car buyers. Perceived listening was modeled through sensing, evaluating, and responding; the design is observational and does not establish causality."
+  },
+  {
+    "id": "source_castleberry_shepherd_ridnour_1999",
+    "version": 1,
+    "title": "Effective Interpersonal Listening in the Personal Selling Environment: Conceptualization, Measurement, and Nomological Validity",
+    "authors": ["Stephen B. Castleberry", "C. David Shepherd", "Rick Ridnour"],
+    "provenance": "academic",
+    "method": "scale_development_and_cross_sectional_validation",
+    "published_at": "1999-01-01",
+    "locator_url": "https://doi.org/10.1080/10696679.1999.11501817",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "The 14-item ILPS scale was validated with 604 salespeople. Self-reported listening correlated with performance and experience, but neither causality nor buyer perception was established."
+  },
+  {
+    "id": "source_hossain_gilbert_2021",
+    "version": 1,
+    "title": "Satisfactory Listening: The Differential Role of Salesperson Communication in (Co)Creating Value for B2B Buyers",
+    "authors": ["Mehdi Tanzeeb Hossain", "Jonathan Ross Gilbert"],
+    "provenance": "academic",
+    "method": "cross_sectional_pls_sem_b2b_buyer_sample",
+    "published_at": "2021-10-01",
+    "locator_url": "https://doi.org/10.1016/j.indmarman.2021.08.010",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "PLS-SEM on buyers from one large US manufacturing firm. Listening facets contributed differently to imagery and transactional value, limiting any one-dimensional listening score."
+  },
+  {
+    "id": "source_weger_etal_2014",
+    "version": 1,
+    "title": "The Relative Effectiveness of Active Listening in Initial Interactions",
+    "authors": ["Harry Weger Jr.", "Gina Castle Bell", "Elizabeth M. Minei", "Melissa C. Robinson"],
+    "provenance": "academic",
+    "method": "controlled_laboratory_experiment",
+    "published_at": "2014-01-08",
+    "locator_url": "https://doi.org/10.1080/10904018.2013.813234",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Experiment with 115 mostly undergraduate participants and 10 trained confederates. Active listening combined paraphrasing with elaboration prompts; this was not a sales or B2B setting."
+  },
+  {
+    "id": "source_magill_etal_2018",
+    "version": 1,
+    "title": "A Meta-Analysis of Motivational Interviewing Process: Technical, Relational, and Conditional Process Models of Change",
+    "authors": ["Molly Magill", "Timothy R. Apodaca", "Brian Borsari", "Jacques Gaume", "Ariel Hoadley", "Rebecca E. F. Gordon", "J. Scott Tonigan", "Theresa Moyers"],
+    "provenance": "academic",
+    "method": "systematic_review_and_meta_analysis",
+    "published_at": "2018-02-01",
+    "locator_url": "https://doi.org/10.1037/ccp0000250",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata, public abstract, and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Meta-analysis of 36 primary clinical studies and 3,025 participants. The mechanisms concern motivational interviewing for behavior change, not sales conversion."
+  },
+  {
+    "id": "source_arndt_rippe_castleberry_2018",
+    "version": 1,
+    "title": "Any Questions? Questioning Skill as a Selling Tactic for Sales Students",
+    "authors": ["Aaron D. Arndt", "Cindy B. Rippe", "Stephen B. Castleberry"],
+    "provenance": "academic",
+    "method": "cross_sectional_dyadic_b2b_field_study",
+    "published_at": "2018-10-01",
+    "locator_url": "https://doi.org/10.63963/001c.143957",
+    "rights": {
+      "status": "green",
+      "basis": "Article distributed under CC BY 4.0; catalog stores metadata and curator-authored paraphrases",
+      "commercial_use": true,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Sixty-two sales students sold real advertising products to B2B customers. Buyer-rated questioning was a composite measure and the observational dyadic design cannot isolate one question type or prove causality."
+  },
+  {
+    "id": "source_yeomans_etal_2020",
+    "version": 1,
+    "title": "Conversational Receptiveness: Improving Engagement with Opposing Views",
+    "authors": ["Michael Yeomans", "Julia Minson", "Hanne Collins", "Frances Chen", "Francesca Gino"],
+    "provenance": "academic",
+    "method": "multi_study_field_observational_and_controlled_intervention",
+    "published_at": "2020-09-01",
+    "locator_url": "https://doi.org/10.1016/j.obhdp.2020.03.011",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Studies combined written policy disagreement, government-executive discussions, Wikipedia data, and a receptiveness intervention. Outcomes were receptiveness, cooperation, conflict, and persuasion rather than sales conversion."
+  },
+  {
+    "id": "source_thompson_1991",
+    "version": 1,
+    "title": "Information Exchange in Negotiation",
+    "authors": ["Leigh L. Thompson"],
+    "provenance": "academic",
+    "method": "two_controlled_negotiation_experiments",
+    "published_at": "1991-03-01",
+    "locator_url": "https://doi.org/10.1016/0022-1031(91)90020-7",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata, public abstract, and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Two negotiation experiments tested seeking and providing information about interests. Negotiation exercises are adjacent to, but not equivalent to, B2B cold calls."
+  },
+  {
+    "id": "source_de_dreu_etal_2000",
+    "version": 1,
+    "title": "Influence of Social Motives on Integrative Negotiation: A Meta-Analytic Review and Test of Two Theories",
+    "authors": ["Carsten K. W. De Dreu", "Laurie R. Weingart", "Seungwoo Kwon"],
+    "provenance": "academic",
+    "method": "meta_analysis",
+    "published_at": "2000-05-01",
+    "locator_url": "https://doi.org/10.1037/0022-3514.78.5.889",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata, public abstract, and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Meta-analysis of 28 negotiation studies. Benefits of prosocial motives were conditional on high or unknown resistance to yielding and did not generalize to low resistance."
+  },
+  {
+    "id": "source_rains_2013",
+    "version": 1,
+    "title": "The Nature of Psychological Reactance Revisited: A Meta-Analytic Review",
+    "authors": ["Stephen A. Rains"],
+    "provenance": "academic",
+    "method": "meta_analysis",
+    "published_at": "2013-01-01",
+    "locator_url": "https://doi.org/10.1111/j.1468-2958.2012.01443.x",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata, public abstract, and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Meta-analysis of 20 studies with 4,942 participants tested competing measurement models of reactance; it does not by itself establish a sales-language intervention."
+  },
+  {
+    "id": "source_dillard_shen_2005",
+    "version": 1,
+    "title": "On the Nature of Reactance and Its Role in Persuasive Health Communication",
+    "authors": ["James Price Dillard", "Lijiang Shen"],
+    "provenance": "academic",
+    "method": "two_controlled_message_experiments",
+    "published_at": "2005-06-01",
+    "locator_url": "https://doi.org/10.1080/03637750500111815",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata, public abstract, and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Parallel student experiments on flossing and alcohol messages. The causal evidence concerns health persuasion and perceived threat to freedom, not B2B objection handling."
+  },
+  {
+    "id": "source_gollwitzer_sheeran_2006",
+    "version": 1,
+    "title": "Implementation Intentions and Goal Achievement: A Meta-Analysis of Effects and Processes",
+    "authors": ["Peter M. Gollwitzer", "Paschal Sheeran"],
+    "provenance": "academic",
+    "method": "meta_analysis",
+    "published_at": "2006-01-01",
+    "locator_url": "https://doi.org/10.1016/S0065-2601(06)38002-1",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata, public abstract, and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Meta-analysis of 94 independent tests involving more than 8,000 participants. The evidence concerns a person's own goal plans, not extracting a commitment from a prospect."
+  },
+  {
+    "id": "source_nickerson_rogers_2010",
+    "version": 1,
+    "title": "Do You Have a Voting Plan? Implementation Intentions, Voter Turnout, and Organic Plan Making",
+    "authors": ["David W. Nickerson", "Todd Rogers"],
+    "provenance": "academic",
+    "method": "large_scale_randomized_field_experiment",
+    "published_at": "2010-02-18",
+    "locator_url": "https://doi.org/10.1177/0956797609359326",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata, author-hosted abstract, and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Randomized phone outreach during a US election with 287,228 records. Effects apply to contacted voters and varied sharply by household composition; voting is not a B2B sales decision."
+  },
+  {
+    "id": "source_milkman_etal_2011",
+    "version": 1,
+    "title": "Using Implementation Intentions Prompts to Enhance Influenza Vaccination Rates",
+    "authors": ["Katherine L. Milkman", "John Beshears", "James J. Choi", "David Laibson", "Brigitte C. Madrian"],
+    "provenance": "academic",
+    "method": "randomized_field_experiment",
+    "published_at": "2011-06-28",
+    "locator_url": "https://doi.org/10.1073/pnas.1103170108",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata, public article summary, and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Employee field experiment with free on-site vaccination. Date-and-time planning outperformed information-only reminders, but the task, incentives, and one-person commitment differ from B2B next steps."
+  },
+  {
+    "id": "source_wilding_etal_2016",
+    "version": 1,
+    "title": "The Question-Behaviour Effect: A Theoretical and Methodological Review and Meta-Analysis",
+    "authors": ["Sarah Wilding", "Mark Conner", "Tracy Sandberg", "Andrew Prestwich", "Rebecca Lawton", "Chantelle Wood", "Eleanor Miles", "Gaston Godin", "Paschal Sheeran"],
+    "provenance": "academic",
+    "method": "systematic_review_and_meta_analysis",
+    "published_at": "2016-11-08",
+    "locator_url": "https://doi.org/10.1080/10463283.2016.1245940",
+    "rights": {
+      "status": "green",
+      "basis": "Open-access article distributed under CC BY 4.0; catalog stores metadata and curator-authored paraphrases",
+      "commercial_use": true,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "The pooled question-behaviour effect was small and smaller in studies with lower risk of bias. Asking about intention is not equivalent to collaboratively forming a plan."
+  },
+  {
+    "id": "source_samhsa_tip35_2019",
+    "version": 1,
+    "title": "Enhancing Motivation for Change in Substance Use Disorder Treatment, TIP 35",
+    "authors": ["Substance Abuse and Mental Health Services Administration"],
+    "provenance": "institutional",
+    "method": "institutional_consensus_and_evidence_guidance",
+    "published_at": "2019-01-01",
+    "locator_url": "https://www.ncbi.nlm.nih.gov/books/NBK571062/",
+    "rights": {
+      "status": "green",
+      "basis": "SAMHSA public-domain notice; do not reproduce copyrighted inserts or distribute the publication itself for a fee",
+      "commercial_use": true,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": [],
+    "notes": "Official clinical guidance describes OARS and advises against premature action focus. It is a practice guide for substance-use treatment, not causal evidence for B2B sales outcomes."
+  },
+  {
+    "id": "source_shrivastava_etal_2023",
+    "version": 1,
+    "title": "An Exploratory Study to Investigate the Interpersonal Listening Behaviour in Personal Sales Context, Its Impact on the Customer's Perception and Outcomes",
+    "authors": ["Archana Shrivastava", "Ruchi Tandon", "Sanjeev Tandon"],
+    "provenance": "academic",
+    "method": "exploratory_cross_sectional_study",
+    "published_at": "2023-07-12",
+    "locator_url": "https://doi.org/10.1504/IJKL.2023.132161",
+    "rights": {
+      "status": "amber",
+      "basis": "Bibliographic metadata, public abstract, and curator-authored factual paraphrase only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-11"
+    },
+    "conflicts": ["source_ramsey_sohi_1997"],
+    "notes": "Exploratory personal-sales study found a seller-versus-buyer listening-perception gap and did not reproduce the expected future-interaction link. Method and setting limit generalization."
+  },
+  {
+    "id": "source_packard_li_berger_2024",
+    "version": 1,
+    "title": "When Language Matters",
+    "authors": ["Grant Packard", "Yang Li", "Jonah Berger"],
+    "provenance": "academic",
+    "method": "two_field_conversation_datasets_and_four_controlled_experiments",
+    "published_at": "2023-12-22",
+    "locator_url": "https://doi.org/10.1093/jcr/ucad080",
+    "rights": {
+      "status": "green",
+      "basis": "Open-access article distributed under CC BY 4.0; catalogue retains metadata and curator-authored factual paraphrases with attribution",
+      "commercial_use": true,
+      "reviewed_at": "2026-07-14"
+    },
+    "conflicts": [],
+    "notes": "The field data concern US customer-service calls and the experiments mainly use service scenarios. The authors explicitly state that initial sales calls, cultures, and higher-conflict settings may have different timing dynamics."
+  },
+  {
+    "id": "source_packard_berger_2021",
+    "version": 1,
+    "title": "How Concrete Language Shapes Customer Satisfaction",
+    "authors": ["Grant Packard", "Jonah Berger"],
+    "provenance": "academic",
+    "method": "two_field_text_analyses_and_three_controlled_experiments",
+    "published_at": "2020-07-18",
+    "locator_url": "https://doi.org/10.1093/jcr/ucaa038",
+    "rights": {
+      "status": "amber",
+      "basis": "Article is CC BY-NC 4.0; retain bibliographic metadata and independently authored factual synthesis only pending commercial-rights review",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-14"
+    },
+    "conflicts": [],
+    "notes": "Evidence combines service-call and written customer-service field data with experiments. Relevance moderates the effect: concrete but irrelevant language did not help and could reduce perceived listening."
+  },
+  {
+    "id": "source_grant_2013",
+    "version": 1,
+    "title": "Rethinking the Extraverted Sales Ideal: The Ambivert Advantage",
+    "authors": ["Adam M. Grant"],
+    "provenance": "academic",
+    "method": "single_organization_longitudinal_field_study",
+    "published_at": "2013-04-08",
+    "locator_url": "https://doi.org/10.1177/0956797612463706",
+    "rights": {
+      "status": "amber",
+      "basis": "Publisher copyright; bibliographic metadata, public abstract, and curator-authored factual synthesis only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-14"
+    },
+    "conflicts": [],
+    "notes": "Study of 340 outbound call-centre representatives found a curvilinear association between extraversion and revenue. Personality was not randomized, and the result does not establish a universal optimal talk ratio."
+  },
+  {
+    "id": "source_swaab_maddux_sinaceur_2011",
+    "version": 1,
+    "title": "Early Words That Work: When and How Virtual Linguistic Mimicry Facilitates Negotiation Outcomes",
+    "authors": ["Roderick I. Swaab", "William W. Maddux", "Marwan Sinaceur"],
+    "provenance": "academic",
+    "method": "two_controlled_computer_mediated_negotiation_experiments",
+    "published_at": "2011-05-01",
+    "locator_url": "https://doi.org/10.1016/j.jesp.2011.01.005",
+    "rights": {
+      "status": "amber",
+      "basis": "Publisher copyright; bibliographic metadata, public abstract, and curator-authored factual synthesis only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-14"
+    },
+    "conflicts": [],
+    "notes": "Experiments used synchronous text negotiations with MBA participants in Thailand and the United States, not spoken B2B sales calls. Deliberate imitation can feel manipulative; Pinkall limits any derived card to genuine vocabulary alignment."
+  },
+  {
+    "id": "source_mason_etal_2013",
+    "version": 1,
+    "title": "Precise Offers Are Potent Anchors: Conciliatory Counteroffers and Attributions of Knowledge in Negotiations",
+    "authors": ["Malia F. Mason", "Alice J. Lee", "Elizabeth A. Wiley", "Daniel R. Ames"],
+    "provenance": "academic",
+    "method": "four_vignette_experiments_one_dyadic_experiment_and_one_mechanism_experiment",
+    "published_at": "2013-07-01",
+    "locator_url": "https://doi.org/10.1016/j.jesp.2013.02.012",
+    "rights": {
+      "status": "amber",
+      "basis": "Publisher copyright; bibliographic metadata, public abstract, and curator-authored factual synthesis only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-14"
+    },
+    "conflicts": ["source_lee_etal_2018"],
+    "notes": "Precise opening offers anchored counteroffers once a negotiation was underway and were attributed greater knowledge. Mostly simulated consumer-goods negotiations; false precision or an unsupported price is outside the finding."
+  },
+  {
+    "id": "source_lee_etal_2018",
+    "version": 1,
+    "title": "Too Precise to Pursue: How Precise First Offers Create Barriers-to-Entry in Negotiations and Markets",
+    "authors": ["Alice J. Lee", "David D. Loschelder", "Martin Schweinsberg", "Malia F. Mason", "Adam D. Galinsky"],
+    "provenance": "academic",
+    "method": "six_experiments_and_one_archival_real_estate_analysis",
+    "published_at": "2018-08-04",
+    "locator_url": "https://doi.org/10.1016/j.obhdp.2018.03.001",
+    "rights": {
+      "status": "amber",
+      "basis": "Publisher copyright; bibliographic metadata, public abstract, and curator-authored factual synthesis only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-14"
+    },
+    "conflicts": ["source_mason_etal_2013"],
+    "notes": "Across six studies and an archival real-estate sample, precise offers reduced willingness to enter negotiation through inferred inflexibility. This boundary concerns pre-negotiation entry and does not erase the within-negotiation anchoring result."
+  },
+  {
+    "id": "source_kraus_2017",
+    "version": 1,
+    "title": "Voice-Only Communication Enhances Empathic Accuracy",
+    "authors": ["Michael W. Kraus"],
+    "provenance": "academic",
+    "method": "five_controlled_social_interaction_experiments",
+    "published_at": "2017-10-01",
+    "locator_url": "https://doi.org/10.1037/amp0000147",
+    "rights": {
+      "status": "amber",
+      "basis": "APA copyright; bibliographic metadata, public abstract, and curator-authored factual synthesis only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-14"
+    },
+    "conflicts": ["source_rossiter_2018"],
+    "notes": "Five experiments reported greater empathic accuracy in voice-only conditions, but the interactions involved strangers rather than sales and a published reanalysis disputed the practical magnitude. Acoustic cues cannot establish a prospect's internal state."
+  },
+  {
+    "id": "source_rossiter_2018",
+    "version": 1,
+    "title": "Voice-Only Does Not Meaningfully Improve Detection of Emotions: Comment on Kraus (2017)",
+    "authors": ["John R. Rossiter"],
+    "provenance": "academic",
+    "method": "published_critical_reanalysis_comment",
+    "published_at": "2018-07-01",
+    "locator_url": "https://doi.org/10.1037/amp0000314",
+    "rights": {
+      "status": "amber",
+      "basis": "APA copyright; bibliographic metadata, public abstract, and curator-authored factual synthesis only",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-14"
+    },
+    "conflicts": ["source_kraus_2017"],
+    "notes": "Published comment reanalyzes Kraus's experiments and argues that the voice-only advantage is too small to be practically meaningful. It is a critique rather than a new preregistered sales experiment."
+  },
+  {
+    "id": "source_templeton_etal_2022",
+    "version": 1,
+    "title": "Fast Response Times Signal Social Connection in Conversation",
+    "authors": ["Emma M. Templeton", "Luke J. Chang", "Elizabeth A. Reynolds", "Marie D. Cone LeBeaumont", "Thalia Wheatley"],
+    "provenance": "academic",
+    "method": "two_naturalistic_conversation_studies_and_one_audio_timing_experiment",
+    "published_at": "2022-01-25",
+    "locator_url": "https://doi.org/10.1073/pnas.2116915119",
+    "rights": {
+      "status": "amber",
+      "basis": "Open full text located, but commercial reuse terms were not independently confirmed; metadata and curator-authored synthesis only pending rights review",
+      "commercial_use": false,
+      "reviewed_at": "2026-07-14"
+    },
+    "conflicts": [],
+    "notes": "Faster partner responses predicted and experimentally signalled connection in friendly, unstructured conversations. Sub-250 ms timing is not consciously controllable; negotiation, interviews, conflict, and B2B sales were explicitly untested boundaries."
+  }
+]

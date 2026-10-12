@@ -1,0 +1,694 @@
+[
+  {
+    "id": "claim_adapt_to_customer_context",
+    "statement": "Adapting selling behavior to the customer and situation is associated with better salesperson performance across the settings synthesized in the cited meta-analysis.",
+    "source_ids": ["source_franke_park_2006"],
+    "source_locators": ["Journal of Marketing Research 43(4), pp. 693-702"],
+    "evidence_grade": "E4",
+    "applicability": {"motions": ["b2b_outbound", "b2b_discovery", "b2b_demo"], "stages": ["all"], "languages": ["fr", "en"], "excluded_when": ["insufficient_customer_context"]},
+    "limitations": ["Association does not prescribe one universal script", "Effect varies by context and seller capability"],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_listening_supports_adaptation",
+    "statement": "Salesperson listening is linked to adaptive selling and relational outcomes, but much of the underlying sales evidence is observational.",
+    "source_ids": ["source_itani_goad_jaramillo_2019"],
+    "source_locators": ["Meta-analytic model and discussion"],
+    "evidence_grade": "E4",
+    "applicability": {"motions": ["b2b_outbound", "b2b_discovery", "b2b_demo"], "stages": ["discovery", "objection"], "languages": ["fr", "en"], "excluded_when": []},
+    "limitations": ["Meta-analysis combines heterogeneous measures", "Do not infer that listening alone causes conversion"],
+    "contradicts_claim_ids": ["claim_listening_not_automatic_persuasion"],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_follow_up_questions",
+    "statement": "In experimental conversations, asking more questions—especially follow-up questions—can increase how much the conversation partner likes the question asker.",
+    "source_ids": ["source_huang_etal_2017"],
+    "source_locators": ["JPSP 113(3), pp. 430-452; experiments on follow-up questions"],
+    "evidence_grade": "E3",
+    "applicability": {"motions": ["b2b_outbound", "b2b_discovery"], "stages": ["opening", "discovery"], "languages": ["fr", "en"], "excluded_when": ["question_already_answered", "interrogation_pattern"]},
+    "limitations": ["Liking is not sales conversion", "Question quality and relevance still matter"],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_active_empathetic_listening_dimensions",
+    "statement": "Active empathetic listening can be operationalized as sensing, processing, and responding rather than merely remaining silent.",
+    "source_ids": ["source_drollinger_etal_2006"],
+    "source_locators": ["Psychology & Marketing 23, pp. 161-180; three-dimensional scale"],
+    "evidence_grade": "E2",
+    "applicability": {"motions": ["b2b_outbound", "b2b_discovery", "b2b_demo"], "stages": ["discovery", "objection"], "languages": ["fr", "en"], "excluded_when": []},
+    "limitations": ["Scale validation is not proof that every listening behavior improves outcomes"],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_perspective_taking_negotiation",
+    "statement": "Perspective taking improved the discovery of underlying interests and negotiation outcomes in the cited controlled negotiation studies.",
+    "source_ids": ["source_galinsky_etal_2008"],
+    "source_locators": ["Psychological Science 19, pp. 378-384"],
+    "evidence_grade": "E3",
+    "applicability": {"motions": ["b2b_discovery", "b2b_negotiation"], "stages": ["discovery", "objection", "pricing"], "languages": ["fr", "en"], "excluded_when": ["invented_customer_motive"]},
+    "limitations": ["Negotiation experiments are not direct cold-call replications", "Perspective taking must generate hypotheses, not claims about the prospect"],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_listening_not_automatic_persuasion",
+    "statement": "High-quality listening can improve interpersonal perceptions and reduce defensiveness without necessarily adding a persuasive effect.",
+    "source_ids": ["source_santoro_etal_2025"],
+    "source_locators": ["PNAS 122(8), preregistered field experiment results"],
+    "evidence_grade": "E3",
+    "applicability": {"motions": ["b2b_outbound", "b2c_consented"], "stages": ["objection"], "languages": ["fr", "en"], "excluded_when": []},
+    "limitations": ["Political persuasion context differs from B2B sales", "Listening remains valuable for understanding even without incremental persuasion"],
+    "contradicts_claim_ids": ["claim_listening_supports_adaptation"],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_spin_discovery_sequence",
+    "statement": "The SPIN framework proposes moving from situation and problem questions toward implications and the value of solving the problem.",
+    "source_ids": ["source_spin_selling", "source_mit_entrepreneurial_sales_2015"],
+    "source_locators": ["SPIN method overview", "MIT Entrepreneurial Sales curriculum map"],
+    "evidence_grade": "E0",
+    "applicability": {"motions": ["b2b_discovery"], "stages": ["discovery"], "languages": ["fr", "en"], "excluded_when": ["prospect_has_already_explained_impact"]},
+    "limitations": ["Practitioner framework", "Do not force a rigid sequence"],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_interests_before_positions",
+    "statement": "Negotiation practice recommends clarifying interests and constraints before arguing over a stated position.",
+    "source_ids": ["source_harvard_pon", "source_never_split_difference"],
+    "source_locators": ["Harvard PON research and teaching resource map", "Never Split the Difference method overview"],
+    "evidence_grade": "E0",
+    "applicability": {"motions": ["b2b_discovery", "b2b_negotiation"], "stages": ["objection", "pricing"], "languages": ["fr", "en"], "excluded_when": ["constraint_already_verified"]},
+    "limitations": ["Collection- and practitioner-level synthesis pending asset-specific review"],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_offer_value_context",
+    "statement": "Offer framing should connect the proposed outcome to the prospect's specific constraints rather than reciting generic product features.",
+    "source_ids": ["source_hormozi_offers", "source_franke_park_2006"],
+    "source_locators": ["$100M Offers training map", "Adaptive-selling meta-analysis"],
+    "evidence_grade": "E0",
+    "applicability": {"motions": ["b2b_outbound", "b2b_discovery", "b2b_demo"], "stages": ["pitch", "pricing"], "languages": ["fr", "en"], "excluded_when": ["no_verified_customer_problem"]},
+    "limitations": ["Practitioner offer framework", "Specific causal claims require Pinkall experiments"],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_ethical_social_proof",
+    "statement": "Relevant social proof can reduce uncertainty only when it is truthful, comparable, and not presented as a guarantee.",
+    "source_ids": ["source_cialdini_principles"],
+    "source_locators": ["Social proof principle overview"],
+    "evidence_grade": "E0",
+    "applicability": {"motions": ["b2b_outbound", "b2b_demo"], "stages": ["objection", "pitch"], "languages": ["fr", "en"], "excluded_when": ["no_comparable_customer_evidence", "regulated_claim"]},
+    "limitations": ["Never fabricate customer names, outcomes, or prevalence", "Effect depends on relevance and credibility"],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_confirm_shared_understanding",
+    "statement": "A concise paraphrase followed by a confirmation question is an observable way to test whether the listener understood the speaker.",
+    "source_ids": ["source_drollinger_etal_2006", "source_itani_goad_jaramillo_2019"],
+    "source_locators": ["Active empathetic listening responding dimension", "Salesperson listening meta-analytic discussion"],
+    "evidence_grade": "E2",
+    "applicability": {"motions": ["b2b_outbound", "b2b_discovery", "b2b_demo"], "stages": ["discovery", "objection", "next_step"], "languages": ["fr", "en"], "excluded_when": ["repetitive_paraphrase"]},
+    "limitations": ["Paraphrase quality matters", "Do not mimic the prospect mechanically"],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_advice_requires_verified_context",
+    "statement": "A sales recommendation should be withheld when the transcript and CRM context do not support its triggering interpretation.",
+    "source_ids": ["source_franke_park_2006", "source_galinsky_etal_2008"],
+    "source_locators": ["Adaptive-selling context dependence", "Perspective-taking versus unverified empathy distinction"],
+    "evidence_grade": "E2",
+    "applicability": {"motions": ["all"], "stages": ["all"], "languages": ["fr", "en"], "excluded_when": []},
+    "limitations": ["Pinkall policy synthesis rather than a directly tested intervention"],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_perceived_salesperson_listening_relationship_outcomes",
+    "statement": "In a new-car-buyer survey model, higher perceived salesperson listening was associated with greater trust and stronger anticipation of future interaction.",
+    "source_ids": ["source_ramsey_sohi_1997"],
+    "source_locators": ["Abstract and Journal of the Academy of Marketing Science 25(2), pp. 127-137"],
+    "evidence_grade": "E2",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery", "b2b_demo"],
+      "stages": ["discovery", "objection", "next_step"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["listening_inferred_only_from_talk_ratio"]
+    },
+    "limitations": [
+      "Cross-sectional perceived-behavior model does not establish causality",
+      "New-car retail buyers are not B2B cold-call prospects",
+      "A later exploratory sales study did not reproduce the future-interaction result"
+    ],
+    "contradicts_claim_ids": ["claim_sales_listening_not_sufficient_future_interaction"],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_sales_listening_observable_dimensions",
+    "statement": "Sales listening can be assessed as attending to the message, evaluating or processing it, and responding, but self-report scores are not direct proof of behavior in a recorded call.",
+    "source_ids": ["source_ramsey_sohi_1997", "source_castleberry_shepherd_ridnour_1999"],
+    "source_locators": [
+      "Ramsey and Sohi abstract: sensing, evaluating, and responding dimensions",
+      "Castleberry et al., pp. 30-38: 14-item ILPS scale validation with 604 salespeople"
+    ],
+    "evidence_grade": "E2",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery", "b2b_demo"],
+      "stages": ["all"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["speaker_diarization_unreliable", "transcript_incomplete"]
+    },
+    "limitations": [
+      "The validated ILPS instrument is self-reported rather than behaviorally coded",
+      "Dimensions do not define a universal composite score for Pinkall"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_b2b_listening_facets_create_different_value",
+    "statement": "In one B2B buyer sample, listening facets contributed differently to imagery and transactional value, arguing against treating every listening behavior as one interchangeable score.",
+    "source_ids": ["source_hossain_gilbert_2021"],
+    "source_locators": ["Industrial Marketing Management 98, pp. 222-240, abstract and PLS-SEM results"],
+    "evidence_grade": "E2",
+    "applicability": {
+      "motions": ["b2b_discovery", "b2b_demo"],
+      "stages": ["discovery", "pitch", "objection"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["single_aggregate_listening_score_only"]
+    },
+    "limitations": [
+      "Single large US manufacturing-firm buyer sample",
+      "Cross-sectional PLS-SEM cannot prove that changing one call behavior creates value",
+      "Abstract-level evidence does not support a precise live utterance"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_active_listening_paraphrase_elaboration_felt_understood",
+    "statement": "In an initial-interaction experiment, paraphrasing the speaker and, when appropriate, inviting elaboration produced greater felt understanding than advice or simple acknowledgements.",
+    "source_ids": ["source_weger_etal_2014"],
+    "source_locators": ["International Journal of Listening 28(1), pp. 13-31; Experimental Stimuli and Hypothesis Testing sections"],
+    "evidence_grade": "E3",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery", "b2b_demo", "b2b_negotiation"],
+      "stages": ["discovery", "objection", "next_step"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["repetitive_paraphrase", "prospect_requests_call_end"]
+    },
+    "limitations": [
+      "Participants were mainly undergraduates speaking with trained confederates",
+      "The experiment measured felt understanding, not sales conversion",
+      "Active listening did not outperform advice on conversation satisfaction or social attractiveness"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_mi_consistent_skills_change_and_sustain_talk",
+    "statement": "Across motivational-interviewing studies, MI-consistent skills correlated with both change talk and sustain talk; sustain talk, not change talk alone, was the more consistent adverse-outcome signal in separate-path analyses.",
+    "source_ids": ["source_magill_etal_2018"],
+    "source_locators": ["PubMed abstract results, Journal of Consulting and Clinical Psychology 86(2), pp. 140-157"],
+    "evidence_grade": "E4",
+    "applicability": {
+      "motions": ["b2b_discovery", "b2b_negotiation"],
+      "stages": ["discovery", "objection"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["clinical_behavior_change_inference_presented_as_sales_causality"]
+    },
+    "limitations": [
+      "Clinical behavior-change corpus, not selling",
+      "Process correlations do not establish that a particular sales question improves conversion",
+      "More prospect language is not automatically favorable language"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_b2b_questioning_composite_purchase_intention",
+    "statement": "In 62 real B2B encounters led by sales students, buyer-rated questioning skill was associated with purchase intention, but the composite combined need discovery, open questions, probing, and active listening.",
+    "source_ids": ["source_arndt_rippe_castleberry_2018"],
+    "source_locators": ["pp. 3-5, Table 1 questioning items, Table 2 correlations, and OLS results"],
+    "evidence_grade": "E2",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery"],
+      "stages": ["discovery"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["single_question_type_claim", "question_count_only"]
+    },
+    "limitations": [
+      "Small sample of sales students and low-value advertising products",
+      "Composite scale prevents attribution to open questions alone",
+      "Customer intention is not an observed purchase and the design is not causal"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_receptive_disagreement_language",
+    "statement": "In contentious written discussions, a recipe using positive statements, explicit acknowledgment, genuine points of agreement, and calibrated hedging improved perceived receptiveness and collaboration evaluations.",
+    "source_ids": ["source_yeomans_etal_2020"],
+    "source_locators": ["pp. 139-142, Studies 4a-4b receptiveness recipe; p. 139 lists the four linguistic markers"],
+    "evidence_grade": "E3",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery", "b2b_negotiation"],
+      "stages": ["objection", "pricing"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["agreement_would_be_false", "hedge_would_obscure_verified_fact"]
+    },
+    "limitations": [
+      "Most intervention evidence used written policy disagreement rather than spoken sales calls",
+      "Outcomes were receptiveness, cooperation, conflict, and persuasion rather than conversion",
+      "Agreement must be genuine and hedging must not weaken required factual clarity"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_interest_information_exchange_negotiation",
+    "statement": "In two negotiation experiments, seeking or providing information about underlying interests improved counterpart-judgment accuracy and joint integrative outcomes, even when only one negotiator did it.",
+    "source_ids": ["source_thompson_1991"],
+    "source_locators": ["Journal of Experimental Social Psychology 27(2), pp. 161-179, abstract and Experiments 1-2"],
+    "evidence_grade": "E3",
+    "applicability": {
+      "motions": ["b2b_discovery", "b2b_negotiation"],
+      "stages": ["discovery", "objection", "pricing"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["confidential_interest_cannot_be_shared", "prospect_requests_call_end"]
+    },
+    "limitations": [
+      "Controlled negotiation exercises are not cold calls",
+      "Integrative joint outcomes are not equivalent to seller revenue",
+      "Information must concern interests rather than pressure for positional concessions"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_prosocial_negotiation_conditional",
+    "statement": "Prosocial rather than egoistic negotiation motives were linked to less contention, more problem solving, and higher joint outcomes only when resistance to yielding was high or unknown, not low.",
+    "source_ids": ["source_de_dreu_etal_2000"],
+    "source_locators": ["Journal of Personality and Social Psychology 78(5), pp. 889-905, abstract and moderator analysis"],
+    "evidence_grade": "E4",
+    "applicability": {
+      "motions": ["b2b_negotiation"],
+      "stages": ["objection", "pricing"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["no_real_resistance", "simple_information_request"]
+    },
+    "limitations": [
+      "Social motive is not a directly observable sentence",
+      "Effects varied with study design and handling of no-agreement dyads",
+      "No evidence supports forcing a problem-solving script when resistance is low"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_reactance_anger_counterargument_signal",
+    "statement": "Across reactance studies, the best-fitting model treated anger and counterarguments together as indicators of psychological reactance rather than as independent proof that an objection is genuine.",
+    "source_ids": ["source_rains_2013"],
+    "source_locators": ["Human Communication Research 39(1), pp. 47-73, abstract and competing-model analysis"],
+    "evidence_grade": "E4",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_negotiation"],
+      "stages": ["objection", "pricing"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["emotion_not_supported_by_transcript_or_audio", "counterargument_is_factual_correction"]
+    },
+    "limitations": [
+      "Meta-analysis validated a construct model rather than a sales intervention",
+      "Speech emotion inference is uncertain and must not diagnose a prospect",
+      "A counterargument may be substantive rather than reactance"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_freedom_threat_can_backfire",
+    "statement": "In two controlled health-message experiments, perceived threat to freedom affected attitudes and intentions through a combined anger-and-negative-cognition response.",
+    "source_ids": ["source_dillard_shen_2005"],
+    "source_locators": ["Communication Monographs 72(2), pp. 144-168, abstract and parallel experiment path models"],
+    "evidence_grade": "E3",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_negotiation"],
+      "stages": ["objection", "pricing", "next_step"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["mandatory_legal_disclosure", "safety_critical_instruction"]
+    },
+    "limitations": [
+      "Student health-persuasion context rather than B2B sales",
+      "The study does not directly validate any Pinkall autonomy-restoring phrase",
+      "Do not infer reactance from a single negative word"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_implementation_intention_goal_attainment",
+    "statement": "Across 94 independent tests, implementation intentions that specified when, where, and how to act had a medium-to-large average effect on a person's own goal attainment.",
+    "source_ids": ["source_gollwitzer_sheeran_2006"],
+    "source_locators": ["Advances in Experimental Social Psychology 38, pp. 69-119, abstract and meta-analytic discussion"],
+    "evidence_grade": "E4",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery", "b2b_demo", "b2b_negotiation"],
+      "stages": ["next_step"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["no_voluntary_intention", "seller_imposes_action"]
+    },
+    "limitations": [
+      "Most studies were not B2B and did not involve dyadic commercial commitments",
+      "Planning supports an existing goal; it does not create consent or genuine intent",
+      "A seller-authored next step is not equivalent to the prospect's own implementation intention"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_phone_planning_prompt_followthrough",
+    "statement": "In a large randomized phone campaign, helping contacted people form a concrete voting plan increased turnout, while standard encouragement and self-prediction did not; effects differed sharply by household context.",
+    "source_ids": ["source_nickerson_rogers_2010"],
+    "source_locators": ["Psychological Science 21(2), pp. 194-199, abstract and treatment-effect results"],
+    "evidence_grade": "E3",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery", "b2b_demo"],
+      "stages": ["next_step"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["no_voluntary_intention", "prospect_declines_follow_up"]
+    },
+    "limitations": [
+      "Voting behavior and campaign calls differ from B2B buying",
+      "The 4.1-point estimate applied to people reached, not the full assigned sample",
+      "The intervention had no detected effect in multiple-eligible-voter households"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_date_time_plan_specificity_followthrough",
+    "statement": "In an employee field experiment, prompting people to write a vaccination date and time increased observed follow-through more reliably than an information-only reminder or a date-only prompt.",
+    "source_ids": ["source_milkman_etal_2011"],
+    "source_locators": ["PNAS 108(26), pp. 10415-10420, abstract and regression-adjusted results"],
+    "evidence_grade": "E3",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery", "b2b_demo", "b2b_negotiation"],
+      "stages": ["next_step"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["no_voluntary_intention", "calendar_constraint_unknown"]
+    },
+    "limitations": [
+      "Free on-site vaccination for employees is not a sales follow-up",
+      "The date-only any-location estimate was not conventionally significant",
+      "Observed effect does not justify pressuring a prospect into a calendar slot"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_question_behavior_effect_small",
+    "statement": "Across question-behaviour studies, asking intention or self-prediction questions had a small average effect on later behavior, and estimates were smaller in better-controlled studies.",
+    "source_ids": ["source_wilding_etal_2016"],
+    "source_locators": ["European Review of Social Psychology, abstract and random-effects meta-analysis: g = 0.14, 95% CI 0.11-0.18"],
+    "evidence_grade": "E4",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery", "b2b_demo"],
+      "stages": ["next_step"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["question_used_as_proof_of_commitment"]
+    },
+    "limitations": [
+      "Heterogeneous behaviors and study designs, mostly outside sales",
+      "Small pooled effect is not a license to treat a verbal answer as commitment",
+      "A concrete implementation plan is a different intervention from self-prediction"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_oars_guidance_not_sales_outcome",
+    "statement": "SAMHSA guidance operationalizes motivational interviewing with open questions, affirmations, reflections, and summaries, while warning against moving to action before readiness is explored.",
+    "source_ids": ["source_samhsa_tip35_2019"],
+    "source_locators": ["TIP 35, Chapter 3, OARS sections and opening strategies"],
+    "evidence_grade": "E0",
+    "applicability": {
+      "motions": ["b2b_discovery"],
+      "stages": ["discovery", "objection"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["clinical_authority_implied", "prospect_manipulation"]
+    },
+    "limitations": [
+      "Institutional clinical practice guidance, not a controlled B2B sales study",
+      "Pinkall may borrow observable communication form, not therapeutic positioning",
+      "No claim of improved conversion follows from OARS alone"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_sales_listening_not_sufficient_future_interaction",
+    "statement": "A 2023 exploratory personal-sales study linked salesperson listening with trust and satisfaction but did not find that listening necessarily led to future interaction.",
+    "source_ids": ["source_shrivastava_etal_2023"],
+    "source_locators": ["International Journal of Knowledge and Learning 16(3), pp. 260-273, abstract and reported outcome pattern"],
+    "evidence_grade": "E2",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery", "b2b_demo"],
+      "stages": ["discovery", "objection", "next_step"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["future_interaction_claim_without_direct_measure"]
+    },
+    "limitations": [
+      "Exploratory cross-sectional study with setting-specific measurement",
+      "Does not show that listening is ineffective for trust or satisfaction",
+      "Contrasts with the future-interaction association in Ramsey and Sohi's new-car-buyer sample"
+    ],
+    "contradicts_claim_ids": ["claim_perceived_salesperson_listening_relationship_outcomes"],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_language_timing_warm_competent",
+    "statement": "Across two customer-service call datasets and four experiments, warmer affective language was more beneficial near the opening and close, while cognitive competence-oriented language was more beneficial in the middle.",
+    "source_ids": ["source_packard_li_berger_2024"],
+    "source_locators": ["Journal of Consumer Research 51(3), abstract; field results in Studies 1-2; causal tests in Studies 3-5"],
+    "evidence_grade": "E3",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery", "b2b_demo"],
+      "stages": ["opening", "discovery", "next_step"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["prospect_requests_call_end", "urgent_safety_or_compliance_issue", "warmth_requires_false_familiarity"]
+    },
+    "limitations": [
+      "Primary field settings were US customer-service calls rather than cold B2B sales",
+      "The authors explicitly identify initial sales calls, culture, issue severity, and conflict as open moderators",
+      "Warmth and competence are language categories, not fixed scripts or personality scores"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_relevant_concrete_language_perceived_listening",
+    "statement": "In customer-service field analyses and controlled experiments, relevant concrete language increased perceived listening and customer outcomes; concreteness did not help when the response was irrelevant.",
+    "source_ids": ["source_packard_berger_2021"],
+    "source_locators": ["Journal of Consumer Research 47(5), abstract; Studies 1-5, especially Study 5 relevance moderation"],
+    "evidence_grade": "E3",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery", "b2b_demo"],
+      "stages": ["discovery", "pitch", "proof", "next_step"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["specific_detail_unverified", "response_not_relevant_to_prospect_need"]
+    },
+    "limitations": [
+      "Most settings were retail or customer service, not complex B2B buying",
+      "Concrete language is not evidence that a factual or commercial claim is true",
+      "A specific but irrelevant response can reduce rather than increase perceived listening"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_ambivert_sales_pattern_association",
+    "statement": "In one outbound call-centre field study, sales revenue had an inverted-U association with measured extraversion, consistent with flexible talking and listening rather than maximal assertiveness.",
+    "source_ids": ["source_grant_2013"],
+    "source_locators": ["Psychological Science 24(6), pp. 1024-1030, abstract and study of 340 outbound representatives"],
+    "evidence_grade": "E2",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery"],
+      "stages": ["opening", "discovery", "pitch"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["personality_diagnosis", "universal_talk_ratio_claim", "single_call_conversion_claim"]
+    },
+    "limitations": [
+      "Single organization and role; personality and speaking behavior were not randomized",
+      "The study does not define an optimal talk-listen percentage for an individual call",
+      "Revenue association does not prove that changing one conversational turn changes conversion"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_early_linguistic_alignment_virtual_negotiation",
+    "statement": "In two synchronous text-negotiation experiments, early alignment with a counterpart's language improved individual outcomes relative to late alignment or control, with trust mediating one experiment.",
+    "source_ids": ["source_swaab_maddux_sinaceur_2011"],
+    "source_locators": ["Journal of Experimental Social Psychology 47(3), pp. 616-621, abstract and Experiments 1-2"],
+    "evidence_grade": "E3",
+    "applicability": {
+      "motions": ["b2b_discovery", "b2b_negotiation"],
+      "stages": ["opening", "discovery", "pricing"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["deceptive_mimicry", "prospect_language_is_offensive", "term_meaning_unverified"]
+    },
+    "limitations": [
+      "The experiments were text based, not telephone calls",
+      "Participants negotiated role-play issues and were not observed in real B2B purchasing",
+      "Pinkall must support genuine terminology alignment, never covert imitation of identity, accent, emotion, or protected traits"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_precise_offer_anchor_after_negotiation_entry",
+    "statement": "Once participants were already negotiating, precise opening offers produced counteroffers and settlements closer to the anchor and were perceived as indicating greater knowledge than round offers.",
+    "source_ids": ["source_mason_etal_2013"],
+    "source_locators": ["Journal of Experimental Social Psychology 49(4), pp. 759-763, Studies 1a-1d, dyadic Study 2, and mechanism Study 3"],
+    "evidence_grade": "E3",
+    "applicability": {
+      "motions": ["b2b_negotiation"],
+      "stages": ["pricing"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["negotiation_not_entered", "price_basis_unverified", "false_precision", "regulated_price_disclosure"]
+    },
+    "limitations": [
+      "Mostly simulated goods negotiations, with one live dyadic experiment",
+      "Precision must reflect a real calculation and is not permission to fabricate knowledge",
+      "The result changes before negotiation entry, as documented by Lee et al. 2018"
+    ],
+    "contradicts_claim_ids": ["claim_precise_offer_can_deter_negotiation_entry"],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_precise_offer_can_deter_negotiation_entry",
+    "statement": "Before a counterpart had entered negotiation, precise first offers reduced willingness to engage relative to round offers, mediated by perceptions that the offer maker was inflexible.",
+    "source_ids": ["source_lee_etal_2018"],
+    "source_locators": ["Organizational Behavior and Human Decision Processes 148, pp. 87-100, abstract; six studies and archival real-estate analysis"],
+    "evidence_grade": "E3",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_demo", "b2b_negotiation"],
+      "stages": ["pitch", "pricing"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["negotiation_already_entered", "fixed_public_price", "regulated_price_disclosure"]
+    },
+    "limitations": [
+      "Evidence includes consumer and real-estate contexts rather than SaaS procurement",
+      "A round estimate still needs a truthful, internally supported basis",
+      "This entry-stage effect does not erase precise anchoring after negotiation begins"
+    ],
+    "contradicts_claim_ids": ["claim_precise_offer_anchor_after_negotiation_entry"],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_voice_only_empathic_accuracy_experiments",
+    "statement": "Across five controlled social-interaction experiments, participants in voice-only conditions showed higher empathic accuracy than participants in vision-only or multisense conditions.",
+    "source_ids": ["source_kraus_2017"],
+    "source_locators": ["American Psychologist 72(7), pp. 644-654, abstract and Experiments 1-5"],
+    "evidence_grade": "E3",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery", "b2b_demo", "b2b_negotiation"],
+      "stages": ["opening", "discovery", "objection", "pricing"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["poor_audio_quality", "medical_or_mental_state_inference", "protected_trait_inference", "emotion_presented_as_fact"]
+    },
+    "limitations": [
+      "The experiments involved social interactions and recorded strangers, not sales outcomes",
+      "A published critical reanalysis disputes the practical magnitude of the reported advantage",
+      "Acoustic conditions, language, culture, hearing, and individual expression can all alter vocal cues"
+    ],
+    "contradicts_claim_ids": ["claim_voice_only_advantage_practical_significance_disputed"],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_voice_only_advantage_practical_significance_disputed",
+    "statement": "A published critical reanalysis of the five voice-only experiments argued that the reported advantage was too small to be practically meaningful.",
+    "source_ids": ["source_rossiter_2018"],
+    "source_locators": ["American Psychologist 73(5), pp. 689-690, critical reanalysis comment and abstract"],
+    "evidence_grade": "E0",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery", "b2b_demo", "b2b_negotiation"],
+      "stages": ["opening", "discovery", "objection", "pricing"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["emotion_presented_as_fact", "automatic_action_without_verification"]
+    },
+    "limitations": [
+      "Published comment and reanalysis, not a new preregistered experiment",
+      "The practical-significance threshold is itself an analytic judgment",
+      "The critique does not establish that vocal information is always useless"
+    ],
+    "contradicts_claim_ids": ["claim_voice_only_empathic_accuracy_experiments"],
+    "status": "draft",
+    "version": 1
+  },
+  {
+    "id": "claim_response_timing_signals_connection_not_sales_outcome",
+    "statement": "In friendly unstructured conversations, faster partner response times predicted felt connection and experimentally altered third-party connection judgments, but the sub-250 ms effect is not a controllable sales tactic.",
+    "source_ids": ["source_templeton_etal_2022"],
+    "source_locators": ["Proceedings of the National Academy of Sciences 119(4), e2116915119, abstract, Studies 1-3, and limitations"],
+    "evidence_grade": "E3",
+    "applicability": {
+      "motions": ["b2b_outbound", "b2b_discovery"],
+      "stages": ["opening", "discovery"],
+      "languages": ["fr", "en"],
+      "excluded_when": ["complex_question_requires_thought", "conflict_or_interruption", "response_speed_prescribed_as_target", "latency_caused_by_network"]
+    },
+    "limitations": [
+      "Samples were friendly conversations between strangers or friends, not goal-directed sales",
+      "Negotiation, interview, and conflict were explicitly identified as untested contexts",
+      "The timing scale is too fast for deliberate optimization and should not become a performance quota"
+    ],
+    "contradicts_claim_ids": [],
+    "status": "draft",
+    "version": 1
+  }
+]

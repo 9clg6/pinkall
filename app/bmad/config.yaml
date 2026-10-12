@@ -1,0 +1,15 @@
+project_name: Pinkall
+project_type: mobile-app
+project_level: 2
+language: fr
+architecture_source: ../ARCHITECTURE.md
+output_directory: docs
+stories_directory: docs/stories
+
+platforms:
+  - ios
+  - android
+  - macos
+
+current_scope: poc
+

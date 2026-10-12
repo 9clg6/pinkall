@@ -1,0 +1,62 @@
+# Dependencies and build outputs
+**/node_modules/
+**/dist/
+**/build/
+**/.dart_tool/
+**/.pub-cache/
+**/coverage/
+**/*.tsbuildinfo
+**/supabase/.temp/
+app/artifacts/
+site/artifacts/
+
+# Local IDE and operating-system files
+.DS_Store
+**/.DS_Store
+**/.idea/
+**/xcuserdata/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+**/.npmrc
+**/.pypirc
+**/local.properties
+**/key.properties
+**/*.jks
+**/*.keystore
+**/*.p12
+**/*.p8
+**/*.pem
+**/*.key
+**/*.crt
+**/*.cer
+**/*.mobileprovision
+**/google-services.json
+**/GoogleService-Info.plist
+**/*service-account*.json
+**/service_account*.json
+**/firebase-adminsdk-*.json
+**/gcp-key*.json
+
+# Flutter-generated local environment
+**/Flutter/ephemeral/
+**/Flutter/flutter_export_environment.sh
+**/Flutter/Generated.xcconfig
+**/.flutter-plugins-dependencies
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+
+# Logs
+*.log
+
+# Local objection learning output (contains sanitized call excerpts)
+app/knowledge/coaching/discovered-objections.local.json
+
+# Internal research and agent working notes
+bmad-outputs/
+competitor-profiles/
+.hallmark/

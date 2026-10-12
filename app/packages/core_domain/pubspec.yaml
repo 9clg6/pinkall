@@ -1,0 +1,20 @@
+name: core_domain
+description: Pinkall domain entities and use cases.
+version: 0.1.0
+publish_to: none
+resolution: workspace
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  core_foundation: 0.1.0
+  freezed_annotation: ^3.1.0
+  json_annotation: ^4.11.0
+
+dev_dependencies:
+  build_runner: ^2.15.1
+  freezed: ^3.2.5
+  json_serializable: ^6.13.0
+  lints: ^6.1.0
+  test: ^1.31.0

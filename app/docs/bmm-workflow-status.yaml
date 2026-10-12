@@ -1,0 +1,54 @@
+project: Pinkall
+level: 2
+type: mobile-app
+updated_at: 2026-07-11
+
+phases:
+  analysis:
+    status: complete
+    inputs:
+      - ../PRODUCT.md
+  planning:
+    status: complete
+    required:
+      - prd-pinkall-telnyx-poc.md
+      - ux-design-pinkall-poc.md
+  solutioning:
+    status: complete
+    required:
+      - architecture-pinkall-telnyx-poc.md
+  implementation:
+    status: in_progress
+    required:
+      - sprint-status.yaml
+      - stories/STORY-007.md
+      - stories/STORY-008.md
+      - stories/STORY-009.md
+      - stories/STORY-010.md
+      - stories/STORY-011.md
+      - stories/STORY-012.md
+      - stories/STORY-013.md
+      - stories/STORY-014.md
+      - stories/STORY-015.md
+      - stories/STORY-016.md
+      - stories/STORY-017.md
+
+superseded_runtime_scope:
+  - prd-pinkall-poc.md
+  - architecture-pinkall-poc.md
+  - sprint-plan-pinkall-poc.md
+
+next_workflow: dev-story STORY-007
+
+planned_sequence:
+  - STORY-007
+  - STORY-008
+  - STORY-009
+  - STORY-010
+  - STORY-011
+  - STORY-012
+  - STORY-013
+  - STORY-014
+  - STORY-015
+  - STORY-016
+  - STORY-017

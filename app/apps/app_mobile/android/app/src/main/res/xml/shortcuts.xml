@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:targetApi="25">
+    <shortcut
+        android:shortcutId="import_recording"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/shortcut_import_recording_short"
+        android:shortcutLongLabel="@string/shortcut_import_recording_long"
+        android:shortcutDisabledMessage="@string/shortcut_import_recording_disabled"
+        tools:ignore="UnusedAttribute">
+        <intent
+            android:action="com.pinkall.pinkall.action.PICK_RECORDING"
+            android:targetPackage="com.pinkall.pinkall"
+            android:targetClass="com.pinkall.pinkall.MainActivity" />
+    </shortcut>
+</shortcuts>

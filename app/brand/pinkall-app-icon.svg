@@ -1,0 +1,9 @@
+<!-- Pinkall · opaque mobile/Android application icon master -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="#F6F5F3"/>
+  <g transform="translate(192 192) scale(6.4)">
+    <path fill="#D31E7D" d="M20 50L80 40L82 49L22 59Z"/>
+    <path fill="#171519" d="M28 10H76C84 10 90 16 90 24V38L80 40L20 50V24C20 16 22 10 28 10Z"/>
+    <path fill="#171519" d="M8 64L22 59L82 49V76C82 84 76 90 68 90H22C14 90 8 84 8 76Z"/>
+  </g>
+</svg>

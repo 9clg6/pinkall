@@ -1,0 +1,11 @@
+<!-- Pinkall · The Shift · horizontal lockup -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252 64" role="img" aria-labelledby="title desc">
+  <title id="title">Pinkall</title>
+  <desc id="desc">Pinkall abstract shift mark and lowercase wordmark.</desc>
+  <g transform="translate(2 2) scale(.6)">
+    <path fill="#D31E7D" d="M20 50L80 40L82 49L22 59Z"/>
+    <path fill="#171519" d="M28 10H76C84 10 90 16 90 24V38L80 40L20 50V24C20 16 22 10 28 10Z"/>
+    <path fill="#171519" d="M8 64L22 59L82 49V76C82 84 76 90 68 90H22C14 90 8 84 8 76Z"/>
+  </g>
+  <text x="72" y="43" fill="#171519" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="650" letter-spacing="-1.5">pinkall</text>
+</svg>

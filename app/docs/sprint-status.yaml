@@ -1,0 +1,154 @@
+project: Pinkall
+sprint: 3
+goal: Stabiliser une beta invite-only sans casser le POC Telnyx reel
+status: in_progress
+updated_at: 2026-07-15
+
+product_stories:
+  STORY-007:
+    status: implemented_needs_mobile_device_validation
+    title: Appel sortant Telnyx WebRTC reel
+  STORY-008:
+    status: implemented_beta_foundation
+    title: Backend SaaS et JWT Telnyx courts
+    limitation: Le store metier reste lie a un unique workspace par instance API.
+  STORY-009:
+    status: implemented_pending_legal_review
+    title: CRM et gate d eligibilite avant composition
+    blocked_by: [legal_rule_validation]
+  STORY-010:
+    status: implemented_needs_real_call_measurements
+    title: Telnyx Media Streaming et Deepgram Flux live
+  STORY-011:
+    status: implemented_needs_reliability_validation
+    title: Transcript final batch et reconciliation
+  STORY-012:
+    status: implemented_needs_human_evaluation
+    title: Debrief et rattachement CRM
+  STORY-013:
+    status: in_progress_human_review_required
+    title: Cartes de coaching sourcees
+    blocked_by: [source_rights_review, sales_expert_review]
+  STORY-014:
+    status: implemented
+    title: Activation utilisateur et modes coach
+  STORY-015:
+    status: harness_complete_dataset_blocked
+    title: Evaluation du coach en shadow
+    blocked_by: [authorized_labeled_calls, approved_thresholds]
+  STORY-016:
+    status: internal_alpha_only
+    title: Coaching live haute precision
+    blocked_by: [shadow_go_live_decision]
+  STORY-017:
+    status: in_progress
+    title: Mesure exposition action resultat
+  STORY-018:
+    status: implemented_needs_distribution_signing_validation
+    title: Composer un appel depuis un lien Pinkall
+  STORY-019:
+    status: implemented_local_adapter_needs_human_review_and_durable_store
+    title: Detecter et capitaliser les nouvelles objections
+  STORY-020:
+    status: implemented_local_single_instance
+    title: Gerer sa bibliotheque d objections et ses reponses custom
+
+beta_foundations:
+  supabase_auth:
+    status: enabled_pending_first_jwt_smoke
+    note: Email invite-only, premier compte et workspace, callback de choix du mot de passe, JWT asymmetric, memberships, RLS, login Flutter et stockage securise sont actives; le bearer POC reste la compatibilite de transition jusqu au premier smoke JWT.
+  workspace_isolation:
+    status: partial
+    note: Auth et memberships sont multi-utilisateurs; sessions, contacts, transcripts et debriefs restent dans un snapshot mono-workspace.
+  privacy_controls:
+    status: backend_implemented
+    note: Export portable, retention 90 jours et suppression des donnees workspace sont proteges par role; les operations destructives exigent une session Supabase. Automatisation, UI et suppression du compte Auth restent a livrer.
+  coaching_quality:
+    status: in_progress
+    note: Audit, manifest, promotion gates et shadow harness sont livres; aucune carte ne devient live sans revue humaine et jeu annote.
+  incoming_calls:
+    status: native_foundation_disabled
+    note: PushKit CallKit et FCM ConnectionService compilent mais les flags restent off sans credentials et validation sur appareils physiques.
+  observability_ci:
+    status: implemented_remote_run_blocked_by_github_billing
+    note: Request IDs, logs structures sans contenu sensible et CI Android macOS iOS sont ajoutes; GitHub refuse actuellement d allouer un runner pour cause de facturation ou spending limit du compte.
+  post_call_reliability:
+    status: implemented_needs_production_restart_drill
+    note: Les retries transitoires sont bornes, l etat du job est durable dans PostgreSQL et les jobs incomplets reprennent au bootstrap; la deduplication reste mono-processus.
+  call_deep_links:
+    status: implemented_needs_distribution_signing_validation
+    note: Le schema pinkall ouvre le composeur pre-rempli a froid ou a chaud sans demarrer l appel; HTTPS est prepare sur iOS et Android, et devra etre revalide avec les signatures de distribution. macOS reste sur le schema personnalise tant que la signature est ad hoc.
+  objection_learning:
+    status: implemented_local_management_needs_durable_store
+    note: Le debrief extrait des objections ancrees sur les segments prospect et les fusionne dans un document local expurge. Les reponses generees restent candidates; une reponse explicitement ajoutee par l utilisateur devient une instruction custom live et selectionnable par le coach. Le SaaS multi-instance devra remplacer le fichier local par PostgreSQL avec isolation workspace.
+
+future_initiatives:
+  - id: FUTURE-001
+    status: descriptive_prototype_implemented
+    title: Empreinte conversationnelle et accompagnement longitudinal
+    spec: docs/future-call-companion-scorecard.md
+    note: Radar descriptif, historique et priorite unique sont livres sans score global ni promesse causale.
+
+validation:
+  static_analysis: passed_2026_07_15
+  automated_tests:
+    api: 195_passed_6_skipped
+    core_domain: 30_passed
+    core_data: 76_passed
+    app_mobile: 112_passed
+    macos_native: 6_passed
+    site_invite_callback: 7_passed
+  builds:
+    android_release_apk: passed_2026_07_14_debug_signed
+    ios_release_no_codesign: passed_2026_07_14
+    macos_release: passed_2026_07_14
+    api_production_docker: passed_2026_07_14
+    site_production: passed_2026_07_14_prebuilt
+  production:
+    render_health: passed_after_rollout_2026_07_14
+    supabase_auth_migration: applied_2026_07_14
+    deep_link_fallback_and_association_files: passed_www_pinkall_app_2026_07_14
+    api_rollout: passed_prebuilt_2026_07_14
+    site_invite_callback: deployed_prebuilt_2026_07_14
+    supabase_invite_site_url: https://www.pinkall.app/auth/invite
+    first_beta_workspace: provisioned_owner_default
+    first_beta_jwt_smoke: pending_password_completion
+    deployed_source_commit: 28575cbfa84eb67a2c993aa79837837133302f1c
+    deployed_image_digest: sha256:53e407223d27f102351601c87b231d24dc505c2fb2fe9941dc639a69bb6b619d
+  external_gates:
+    legal_rules_france_europe: pending_legal_validation
+    coaching_human_review: pending
+    coaching_labeled_dataset: pending
+    ios_apns_voip_credentials: pending
+    android_firebase_credentials: pending
+    physical_mobile_incoming_calls: pending
+    android_distribution_keystore: pending
+    apple_distribution_signing: pending
+    github_actions_billing_or_spending_limit: blocked
+
+previous_sprints:
+  sprint_2:
+    goal: Appel sortant Telnyx WebRTC reel sur iOS Android et macOS
+    status: implemented_with_external_validation_remaining
+    stories:
+      STORY-007: implemented
+      STORY-008: foundation_started
+      STORY-009: implemented
+      STORY-010: implemented
+      STORY-011: implemented
+      STORY-012: implemented
+      STORY-013: draft_corpus
+      STORY-014: implemented
+      STORY-015: planned
+      STORY-016: internal_alpha
+      STORY-017: partial
+  sprint_1:
+    goal: Vertical slice local Home vers Simulated Call vers Debrief
+    status: complete_and_runtime_removed
+    stories:
+      STORY-001: complete
+      STORY-002: complete
+      STORY-003: complete
+      STORY-004: complete
+      STORY-005: complete
+      STORY-006: complete

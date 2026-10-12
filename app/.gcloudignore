@@ -1,0 +1,44 @@
+# Cloud Build only needs the files copied by the API Dockerfile.
+.gcloudignore
+.git
+.gitignore
+**/.DS_Store
+**/.idea
+**/.vscode
+
+# Dart, Flutter, CocoaPods and test outputs.
+**/.dart_tool
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/.pub-cache
+**/.symlinks
+**/build
+**/coverage
+**/Pods
+
+# Mobile/desktop application sources are not part of the API container.
+apps/app_mobile
+
+# Product and local development material unused by the API image.
+artifacts
+bmad
+brand
+docs
+tool
+ARCHITECTURE.md
+DESIGN.md
+README.md
+
+# Never upload local secrets or credentials.
+**/.env
+**/.env.*
+**/*.key
+**/*.pem
+**/*credentials*.json
+**/*service-account*.json
+
+# Backend development-only files.
+apps/api_agent_vocal/test
+apps/api_agent_vocal/bin/run_poc.sh
+apps/api_agent_vocal/README.md

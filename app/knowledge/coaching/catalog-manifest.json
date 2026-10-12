@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "catalog_version": "1.1.0",
+  "artifact_digests": {
+    "sources.json": "sha256:948f99010364b9113540120b333e50112e8e749ffbd0b4de7bcc7eb6fad587d1",
+    "claims.json": "sha256:a55762f9753d49839ed6492cb585bfe74f84ce1533868a1d820cbd96c1cb3d8d",
+    "recommendations.json": "sha256:436a5b63c769fcf32301605cdeef1f6bb4095aad5384c6a71324fdee2ab893ec",
+    "release-policy.json": "sha256:7eadafed0517f6fea35841be2892ed0f7e8a70373724a2df80acc60c8307c057",
+    "rights-policies.json": "sha256:f5f1406b04ed6ebad0e6620e895354565f92b8dae7a7358a5b1fd05895b23456",
+    "reviews.json": "sha256:0603210bd7c5fc38fb772183d2d0a3ff41e11d66031dbc9e70f59b5727ea2679",
+    "evaluation-policy.json": "sha256:ab369563042720dadf7bf2ec405e3d3c45dab18fd559098a4255de46f7469bb8"
+  }
+}

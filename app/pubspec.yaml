@@ -1,0 +1,13 @@
+name: pinkall_workspace
+publish_to: none
+
+environment:
+  sdk: ^3.12.2
+
+workspace:
+  - apps/app_mobile
+  - apps/api_agent_vocal
+  - packages/core_foundation
+  - packages/core_domain
+  - packages/core_data
+  - packages/core_presentation

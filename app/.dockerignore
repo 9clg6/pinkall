@@ -1,0 +1,49 @@
+# Version control and editor state
+.git
+.gitignore
+**/.DS_Store
+**/.idea
+**/.vscode
+
+# Dart / Flutter generated files
+**/.dart_tool
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/.pub-cache
+**/.symlinks
+**/build
+**/coverage
+**/Pods
+
+# Mobile and desktop sources are not needed by the API image. Their pubspecs
+# are explicitly copied by the Dockerfile for workspace resolution.
+apps/app_mobile/android
+apps/app_mobile/ios
+apps/app_mobile/lib
+apps/app_mobile/macos
+apps/app_mobile/test
+
+# Product artefacts and local planning material
+artifacts
+bmad
+brand
+docs
+tool
+ARCHITECTURE.md
+DESIGN.md
+README.md
+
+# Never send local credentials to the Docker daemon.
+**/.env
+**/.env.*
+**/*.key
+**/*.pem
+**/*credentials*.json
+**/*service-account*.json
+
+# Backend development-only files
+apps/api_agent_vocal/.env*
+apps/api_agent_vocal/test
+apps/api_agent_vocal/bin/run_poc.sh
+apps/api_agent_vocal/README.md

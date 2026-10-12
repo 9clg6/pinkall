@@ -1,0 +1,32 @@
+name: api_agent_vocal
+description: Pinkall server-side POC for real media streaming, transcription, and optional coaching.
+version: 0.1.0
+publish_to: none
+resolution: workspace
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  crypto: ^3.0.7
+  cryptography: ^2.7.0
+  csv: ^6.0.0
+  http: ^1.6.0
+  jose: ^0.3.5+2
+  postgres: ^3.5.12
+  shelf: ^1.4.2
+  shelf_router: ^1.1.4
+  shelf_web_socket: ^3.0.0
+  web_socket_channel: ^3.0.3
+
+# postgres 3.5.12 does not pass the endpoint hostname to SecureSocket.secure,
+# which breaks verify-full against managed poolers. Keep the audited local
+# patch until the upstream package ships the equivalent fix.
+dependency_overrides:
+  postgres:
+    path: ../../third_party/postgres
+
+dev_dependencies:
+  core_data: 0.1.0
+  lints: ^6.1.0
+  test: ^1.31.0

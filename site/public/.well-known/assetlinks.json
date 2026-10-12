@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pinkall.pinkall",
+      "sha256_cert_fingerprints": [
+        "54:AC:80:DB:87:60:3D:B8:05:09:3B:75:9F:42:1B:75:9A:A3:9C:FB:FD:08:24:95:2E:BF:A1:AD:FB:9C:21:27"
+      ]
+    }
+  }
+]

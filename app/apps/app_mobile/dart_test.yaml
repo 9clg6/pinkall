@@ -1,0 +1,3 @@
+# Flutter widget tests share engine-level view and plugin state. Test files that
+# exercise mobile and desktop layouts must therefore not run concurrently.
+concurrency: 1

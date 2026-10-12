@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "policy_version": "shadow-v1",
+  "status": "draft_internal_acceptance_policy",
+  "thresholds": {
+    "minimum_labelled_cases": 50,
+    "minimum_precision": 0.85,
+    "maximum_false_positive_rate": 0.03,
+    "minimum_source_fidelity": 1.0,
+    "required_observation_coverage": 1.0,
+    "required_cost_coverage": 1.0,
+    "maximum_p95_latency_ms": null,
+    "maximum_average_cost_usd": null
+  },
+  "notes": [
+    "Quality thresholds mirror the existing internal release policy and are not universal sales truths.",
+    "Latency and cost budgets remain unset until product SLA and unit economics are approved.",
+    "Unset budgets are reported as not_configured and block an all-gates-pass result."
+  ]
+}

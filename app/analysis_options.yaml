@@ -1,0 +1,19 @@
+analyzer:
+  exclude:
+    - 'third_party/**'
+    - '**/*.g.dart'
+    - '**/*.freezed.dart'
+    - '**/*.gr.dart'
+    - '**/gen/**'
+    - '**/generated/**'
+  errors:
+    public_member_api_docs: warning
+
+linter:
+  rules:
+    always_specify_types: true
+    always_use_package_imports: true
+    directives_ordering: true
+    prefer_single_quotes: true
+    public_member_api_docs: true
+    require_trailing_commas: true

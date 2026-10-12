@@ -1,0 +1,140 @@
+# yaml-language-server: $schema=https://render.com/schema/render.yaml.json
+
+# Render Blueprint template for the Pinkall POC API.
+#
+# This is deliberately an image-backed service. Replace the image placeholders
+# with a real linux/amd64 image digest before creating the Blueprint. Never set
+# runtime to `docker`, add a repo/build command, or replace the digest with a
+# mutable tag: Render must pull the exact artifact that CI built and reviewed.
+services:
+  - type: web
+    name: pinkall-api-poc
+    runtime: image
+    region: frankfurt
+    plan: starter
+    numInstances: 1
+    healthCheckPath: /health
+    maxShutdownDelaySeconds: 300
+    renderSubdomainPolicy: enabled
+    image:
+      url: europe-west9-docker.pkg.dev/__GCP_PROJECT_ID__/pinkall/pinkall-api@sha256:__IMAGE_DIGEST_64_HEX__
+      creds:
+        fromRegistryCreds:
+          name: pinkall-gar-reader
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: STRICT_CONFIG
+        value: "true"
+      - key: PINKALL_ALLOW_EPHEMERAL_STORE
+        value: "false"
+      - key: PINKALL_STORAGE_TENANT_ID
+        sync: false
+      # Invite-only Supabase Auth. The UUID binds the only relational
+      # workspace authorized to access this instance's legacy snapshot.
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_JWT_AUDIENCE
+        value: authenticated
+      - key: PINKALL_SNAPSHOT_WORKSPACE_ID
+        sync: false
+      # Temporary compatibility while Flutter still sends the shared POC
+      # bearer. Set false after SUPABASE_URL and the snapshot workspace binding
+      # are configured.
+      - key: PINKALL_ALLOW_POC_BEARER
+        value: "true"
+      - key: PINKALL_API_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      # The public CA content is uploaded separately as a Render Secret File.
+      # Keeping the path explicit makes strict startup fail closed if that
+      # mounted file is absent or unreadable.
+      - key: DATABASE_SSL_ROOT_CERT
+        value: /etc/secrets/supabase-ca.crt
+
+      # Telnyx Voice SDK + signed Call Control. The two connection IDs must be
+      # distinct. PUBLIC_BASE_URL is intentionally omitted: on Render the API
+      # derives it from RENDER_EXTERNAL_URL unless a custom-domain override is
+      # added later.
+      - key: TELNYX_API_BASE_URL
+        value: https://api.telnyx.com/v2
+      - key: TELNYX_API_KEY
+        sync: false
+      - key: TELNYX_TELEPHONY_CREDENTIAL_ID
+        sync: false
+      - key: TELNYX_PUBLIC_KEY
+        sync: false
+      - key: TELNYX_WEBRTC_CONNECTION_ID
+        sync: false
+      - key: TELNYX_CALL_CONTROL_CONNECTION_ID
+        sync: false
+      - key: TELNYX_FROM_NUMBER
+        sync: false
+      - key: TELNYX_CALLER_NAME
+        sync: false
+      - key: TELNYX_CALLER_NUMBER
+        sync: false
+
+      # Deepgram Flux handles turn-aware realtime STT in the EU. Voxtral stays
+      # configured for the authoritative final batch transcript and can be
+      # selected as the live fallback with STT_PROVIDER=voxtral.
+      - key: STT_PROVIDER
+        value: deepgram_flux
+      - key: DEEPGRAM_API_KEY
+        sync: false
+      - key: DEEPGRAM_REALTIME_BASE_URL
+        value: wss://api.eu.deepgram.com
+      - key: DEEPGRAM_FLUX_MODEL
+        value: flux-general-multi
+      - key: DEEPGRAM_LANGUAGE_HINT
+        value: fr
+      - key: DEEPGRAM_EOT_THRESHOLD
+        value: "0.7"
+      - key: DEEPGRAM_EAGER_EOT_THRESHOLD
+        value: "0.45"
+      - key: DEEPGRAM_EOT_TIMEOUT_MS
+        value: "6000"
+      - key: MISTRAL_API_KEY
+        sync: false
+      - key: MISTRAL_REALTIME_BASE_URL
+        value: wss://api.mistral.ai
+      - key: MISTRAL_REALTIME_MODEL
+        value: voxtral-mini-transcribe-realtime-2602
+      - key: MISTRAL_BATCH_BASE_URL
+        value: https://api.mistral.ai
+      - key: MISTRAL_BATCH_MODEL
+        value: voxtral-mini-2602
+      - key: MISTRAL_TARGET_DELAY_MS
+        value: "1000"
+
+      # OpenAI is the exclusive live/post-call coach. It starts off and can be
+      # activated by the user during a call.
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_BASE_URL
+        value: https://api.openai.com/v1
+      - key: OPENAI_COACH_MODEL
+        value: gpt-5.4-mini
+      - key: OPENAI_POST_CALL_MODEL
+        value: gpt-5.4-mini
+      - key: OPENAI_COACH_REASONING_EFFORT
+        value: none
+      - key: OPENAI_POST_CALL_REASONING_EFFORT
+        value: low
+      - key: COACH_PROVIDER
+        value: openai
+      - key: POST_CALL_PROVIDER
+        value: openai
+      - key: COACH_MODE_DEFAULT
+        value: "off"
+      - key: COACH_RELEASE_CHANNEL
+        value: internal_alpha
+      - key: COACH_CATALOG_DIR
+        value: /app/knowledge/coaching
+      - key: COACH_MIN_CONFIDENCE
+        value: "0.75"
+      - key: COACH_MIN_INTERVAL_MS
+        value: "8000"
+      - key: MAX_SESSION_AUDIO_BYTES
+        value: "67108864"

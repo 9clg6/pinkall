@@ -1,0 +1,114 @@
+name: Pinkall CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - 'agent/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pinkall-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality-and-android:
+    name: Quality, tests and Android
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Install Flutter
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2
+        with:
+          flutter-version: 3.44.3
+          channel: stable
+          cache: true
+
+      - name: Export pinned Flutter path
+        run: |
+          echo "PINKALL_FLUTTER_BIN=$(command -v flutter)" >> "$GITHUB_ENV"
+          echo "PINKALL_DART_BIN=$(dirname "$(command -v flutter)")/dart" >> "$GITHUB_ENV"
+
+      - name: Resolve workspace
+        working-directory: app
+        run: ./tool/flutter.sh pub get
+
+      - name: Check formatting
+        working-directory: app
+        run: ./tool/dart.sh format --output=none --set-exit-if-changed apps packages
+
+      - name: Analyze workspace
+        working-directory: app
+        run: ./tool/dart.sh analyze
+
+      - name: Test API
+        working-directory: app
+        run: ./tool/dart.sh test apps/api_agent_vocal
+
+      - name: Test core domain
+        working-directory: app/packages/core_domain
+        run: ../../tool/flutter.sh test
+
+      - name: Test core data
+        working-directory: app/packages/core_data
+        run: ../../tool/flutter.sh test
+
+      - name: Test Flutter app
+        working-directory: app/apps/app_mobile
+        run: ../../tool/flutter.sh test --concurrency=1
+
+      - name: Build production API image
+        working-directory: app
+        run: docker build --file apps/api_agent_vocal/Dockerfile .
+
+      - name: Build Android release APK
+        working-directory: app/apps/app_mobile
+        run: ../../tool/flutter.sh build apk --release
+
+  apple-builds:
+    name: macOS and iOS builds
+    runs-on: macos-15
+    timeout-minutes: 40
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Install Flutter
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2
+        with:
+          flutter-version: 3.44.3
+          channel: stable
+          cache: true
+
+      - name: Export pinned Flutter path
+        run: echo "PINKALL_FLUTTER_BIN=$(command -v flutter)" >> "$GITHUB_ENV"
+
+      - name: Resolve workspace
+        working-directory: app
+        run: ./tool/flutter.sh pub get
+
+      - name: Build macOS release
+        working-directory: app/apps/app_mobile
+        run: ../../tool/flutter.sh build macos --release
+
+      - name: Test native macOS bridge
+        working-directory: app/apps/app_mobile/macos
+        env:
+          PINKALL_API_TOKEN: native-test-placeholder
+        run: >-
+          xcodebuild -quiet test
+          -workspace Runner.xcworkspace
+          -scheme Runner
+          -configuration Debug
+          -destination platform=macOS
+          CODE_SIGNING_ALLOWED=NO
+
+      - name: Build iOS release without signing
+        working-directory: app/apps/app_mobile
+        run: ../../tool/flutter.sh build ios --release --no-codesign

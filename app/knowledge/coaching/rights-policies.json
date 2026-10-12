@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "policies": {
+    "copyrighted_metadata_only": {
+      "license_id": "COPYRIGHTED-OR-UNSPECIFIED",
+      "usage_mode": "bibliographic_metadata_and_original_factual_synthesis_only",
+      "allow_shadow": true,
+      "allow_live": false,
+      "restrictions": [
+        "no_source_text_redistribution",
+        "no_training_corpus_copy",
+        "human_rights_review_required_before_live"
+      ]
+    },
+    "internal_noncommercial_research_only": {
+      "license_id": "CC-BY-NC-SA-4.0",
+      "usage_mode": "internal_research_map_only",
+      "allow_shadow": false,
+      "allow_live": false,
+      "restrictions": [
+        "no_commercial_runtime_use",
+        "no_source_text_redistribution"
+      ]
+    },
+    "per_asset_review_required": {
+      "license_id": "MIXED-PER-ASSET",
+      "usage_mode": "metadata_only_pending_asset_level_review",
+      "allow_shadow": false,
+      "allow_live": false,
+      "restrictions": [
+        "review_each_asset_before_use",
+        "no_source_text_redistribution"
+      ]
+    },
+    "cc_by_4_0_original_paraphrase": {
+      "license_id": "CC-BY-4.0",
+      "usage_mode": "metadata_and_original_factual_synthesis_with_attribution",
+      "allow_shadow": true,
+      "allow_live": true,
+      "restrictions": [
+        "preserve_attribution",
+        "do_not_present_paraphrase_as_verbatim_quote"
+      ]
+    },
+    "us_public_domain_with_exceptions": {
+      "license_id": "US-PUBLIC-DOMAIN-WITH-THIRD-PARTY-EXCEPTIONS",
+      "usage_mode": "metadata_and_original_factual_synthesis",
+      "allow_shadow": true,
+      "allow_live": true,
+      "restrictions": [
+        "exclude_identified_third_party_material",
+        "do_not_resell_source_publication"
+      ]
+    }
+  },
+  "source_policy_ids": {
+    "source_franke_park_2006": "copyrighted_metadata_only",
+    "source_itani_goad_jaramillo_2019": "copyrighted_metadata_only",
+    "source_huang_etal_2017": "copyrighted_metadata_only",
+    "source_drollinger_etal_2006": "copyrighted_metadata_only",
+    "source_galinsky_etal_2008": "copyrighted_metadata_only",
+    "source_santoro_etal_2025": "copyrighted_metadata_only",
+    "source_mit_entrepreneurial_sales_2015": "internal_noncommercial_research_only",
+    "source_harvard_pon": "per_asset_review_required",
+    "source_spin_selling": "copyrighted_metadata_only",
+    "source_never_split_difference": "copyrighted_metadata_only",
+    "source_hormozi_offers": "copyrighted_metadata_only",
+    "source_cialdini_principles": "copyrighted_metadata_only",
+    "source_ramsey_sohi_1997": "copyrighted_metadata_only",
+    "source_castleberry_shepherd_ridnour_1999": "copyrighted_metadata_only",
+    "source_hossain_gilbert_2021": "copyrighted_metadata_only",
+    "source_weger_etal_2014": "copyrighted_metadata_only",
+    "source_magill_etal_2018": "copyrighted_metadata_only",
+    "source_arndt_rippe_castleberry_2018": "cc_by_4_0_original_paraphrase",
+    "source_yeomans_etal_2020": "copyrighted_metadata_only",
+    "source_thompson_1991": "copyrighted_metadata_only",
+    "source_de_dreu_etal_2000": "copyrighted_metadata_only",
+    "source_rains_2013": "copyrighted_metadata_only",
+    "source_dillard_shen_2005": "copyrighted_metadata_only",
+    "source_gollwitzer_sheeran_2006": "copyrighted_metadata_only",
+    "source_nickerson_rogers_2010": "copyrighted_metadata_only",
+    "source_milkman_etal_2011": "copyrighted_metadata_only",
+    "source_wilding_etal_2016": "cc_by_4_0_original_paraphrase",
+    "source_samhsa_tip35_2019": "us_public_domain_with_exceptions",
+    "source_shrivastava_etal_2023": "copyrighted_metadata_only",
+    "source_packard_li_berger_2024": "cc_by_4_0_original_paraphrase",
+    "source_packard_berger_2021": "copyrighted_metadata_only",
+    "source_grant_2013": "copyrighted_metadata_only",
+    "source_swaab_maddux_sinaceur_2011": "copyrighted_metadata_only",
+    "source_mason_etal_2013": "copyrighted_metadata_only",
+    "source_lee_etal_2018": "copyrighted_metadata_only",
+    "source_kraus_2017": "copyrighted_metadata_only",
+    "source_rossiter_2018": "copyrighted_metadata_only",
+    "source_templeton_etal_2022": "copyrighted_metadata_only"
+  }
+}
